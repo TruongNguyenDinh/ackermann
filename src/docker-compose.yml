@@ -1,0 +1,49 @@
+services:
+  ros2:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+      args:
+        USERNAME: rosdev
+        UID: 1000
+        GID: 1000
+
+    container_name: ros2_humble
+
+    user: rosdev
+
+    stdin_open: true
+    tty: true
+
+    network_mode: host
+    ipc: host
+    privileged: true
+
+    environment:
+      ROS_DOMAIN_ID: "0"
+      RMW_IMPLEMENTATION: rmw_fastrtps_cpp
+
+      # GUI
+      DISPLAY: ":1"
+      QT_X11_NO_MITSHM: "1"
+
+      # SSH agent
+      SSH_AUTH_SOCK: /ssh-agent
+
+    volumes:
+      # Workspace
+      - .:/home/rosdev/ros2_ws/src
+
+      # X11
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+
+      # SSH agent
+      - ${SSH_AUTH_SOCK}:/ssh-agent
+
+    gpus: all
+
+    devices:
+      - /dev/dri:/dev/dri
+
+    entrypoint: /ros_entrypoint.sh
+    command: bash
