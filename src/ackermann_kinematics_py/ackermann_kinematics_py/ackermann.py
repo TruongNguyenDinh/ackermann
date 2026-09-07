@@ -55,34 +55,33 @@ class AckermannKinematics:
 
         R = v / omega
 
-        # ------------------------------------------------------------
-        # Rear wheel turning radius
-        # ------------------------------------------------------------
+        if R > 0.0:
+            # LEFT TURN
+            R_inner = R - self.W / 2.0
+            R_outer = R + self.W / 2.0
 
-        R_left = R - self.W / 2.0
-        R_right = R + self.W / 2.0
+            steering_left = math.atan2(self.L, R_inner)
+            steering_right = math.atan2(self.L, R_outer)
 
-        # ------------------------------------------------------------
-        # Steering angles
-        # ------------------------------------------------------------
+            v_left = omega * R_inner
+            v_right = omega * R_outer
 
-        steering_left = math.atan2(
-            self.L,
-            R_left
-        )
+        else:
+            # RIGHT TURN
+            R_abs = abs(R)
 
-        steering_right = math.atan2(
-            self.L,
-            R_right
-        )
+            R_outer = R_abs + self.W / 2.0
+            R_inner = R_abs - self.W / 2.0
+
+            steering_left = -math.atan2(self.L, R_outer)
+            steering_right = -math.atan2(self.L, R_inner)
+
+            v_left = -omega * R_outer
+            v_right = -omega * R_inner
 
         # ------------------------------------------------------------
         # Rear wheel linear velocity
         # ------------------------------------------------------------
-
-        v_left = omega * R_left
-        v_right = omega * R_right
-
         # ------------------------------------------------------------
         # m/s -> rad/s
         # ------------------------------------------------------------
@@ -109,13 +108,13 @@ class AckermannKinematicsNode(Node):
         # Parameters
         # ============================================================
 
-        self.declare_parameter("wheelbase", 0.5)
-        self.declare_parameter("track_width", 0.4)
-        self.declare_parameter("wheel_radius", 0.1)
+        self.declare_parameter("wheelbase", 0.3187)
+        self.declare_parameter("track_width", 0.238)
+        self.declare_parameter("wheel_radius", 0.05)
 
         self.declare_parameter(
             "max_steering_angle",
-            0.6
+            0.5
         )
 
         self.declare_parameter(
