@@ -1,1 +1,0 @@
-/home/ndtruong/workspace/ackermann_odometry/launch/map_server.launch.py

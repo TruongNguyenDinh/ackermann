@@ -1,1 +1,0 @@
-/home/ndtruong/workspace/ackermann_odometry/launch/sim_slam.launch.py

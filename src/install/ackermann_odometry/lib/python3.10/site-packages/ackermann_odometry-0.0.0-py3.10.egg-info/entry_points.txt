@@ -1,3 +1,0 @@
-[console_scripts]
-ackermann_odometry = ackermann_odometry.odom_node:main
-
