@@ -1,0 +1,31 @@
+[0.007s] Invoking command in '/home/ndtruong/workspace/build/ackermann_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ndtruong/workspace/build/ackermann_description -- -j8 -l8
+[0.034s] Invoked command in '/home/ndtruong/workspace/build/ackermann_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ndtruong/workspace/build/ackermann_description -- -j8 -l8
+[0.042s] Invoking command in '/home/ndtruong/workspace/build/ackermann_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ndtruong/workspace/build/ackermann_description
+[0.048s] -- Install configuration: ""
+[0.048s] -- Execute custom install script
+[0.048s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/launch/model.launch.py
+[0.048s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/ackermann.urdf.xacro
+[0.049s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/core_macro.xacro
+[0.049s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/gazebo_control.xacro
+[0.049s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/inertial_macros.xacro
+[0.049s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/laser.xacro
+[0.049s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/materials.xacro
+[0.049s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/wheels.xacro
+[0.049s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/rviz2/rviz.rviz
+[0.049s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/config/controller.yaml
+[0.050s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ament_index/resource_index/package_run_dependencies/ackermann_description
+[0.050s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ament_index/resource_index/parent_prefix_path/ackermann_description
+[0.050s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/environment/ament_prefix_path.sh
+[0.050s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/environment/ament_prefix_path.dsv
+[0.050s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/environment/path.sh
+[0.050s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/environment/path.dsv
+[0.050s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/local_setup.bash
+[0.050s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/local_setup.sh
+[0.050s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/local_setup.zsh
+[0.050s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/local_setup.dsv
+[0.051s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/package.dsv
+[0.057s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ament_index/resource_index/packages/ackermann_description
+[0.057s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/cmake/ackermann_descriptionConfig.cmake
+[0.057s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/cmake/ackermann_descriptionConfig-version.cmake
+[0.057s] -- Up-to-date symlink: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/package.xml
+[0.059s] Invoked command in '/home/ndtruong/workspace/build/ackermann_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ndtruong/workspace/build/ackermann_description

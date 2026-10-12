@@ -1,0 +1,55 @@
+[0.021s] Invoking command in '/home/ndtruong/workspace/build/ackermann_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ndtruong/workspace/ackermann_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ndtruong/workspace/install/ackermann_description
+[0.527s] -- The C compiler identification is GNU 11.4.0
+[0.527s] -- The CXX compiler identification is GNU 11.4.0
+[0.527s] -- Detecting C compiler ABI info
+[0.527s] -- Detecting C compiler ABI info - done
+[0.527s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.527s] -- Detecting C compile features
+[0.527s] -- Detecting C compile features - done
+[0.527s] -- Detecting CXX compiler ABI info
+[0.527s] -- Detecting CXX compiler ABI info - done
+[0.527s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.527s] -- Detecting CXX compile features
+[0.527s] -- Detecting CXX compile features - done
+[0.527s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.736s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.834s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.895s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.033s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.034s] -- Added test 'lint_cmake' to check CMake code style
+[1.036s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.040s] -- Added test 'xmllint' to check XML markup files
+[1.043s] -- Configuring done
+[1.049s] -- Generating done
+[1.053s] -- Build files have been written to: /home/ndtruong/workspace/build/ackermann_description
+[1.208s] Invoked command in '/home/ndtruong/workspace/build/ackermann_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ndtruong/workspace/ackermann_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ndtruong/workspace/install/ackermann_description
+[1.209s] Invoking command in '/home/ndtruong/workspace/build/ackermann_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ndtruong/workspace/build/ackermann_description -- -j8 -l8
+[1.353s] Invoked command in '/home/ndtruong/workspace/build/ackermann_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ndtruong/workspace/build/ackermann_description -- -j8 -l8
+[1.369s] Invoking command in '/home/ndtruong/workspace/build/ackermann_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ndtruong/workspace/build/ackermann_description
+[1.378s] -- Install configuration: ""
+[1.379s] -- Execute custom install script
+[1.381s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/launch/model.launch.py
+[1.397s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/ackermann.urdf.xacro
+[1.412s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/core_macro.xacro
+[1.423s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/gazebo_control.xacro
+[1.436s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/inertial_macros.xacro
+[1.467s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/laser.xacro
+[1.467s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/materials.xacro
+[1.470s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/wheels.xacro
+[1.478s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/rviz2/rviz.rviz
+[1.486s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/config/controller.yaml
+[1.496s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ament_index/resource_index/package_run_dependencies/ackermann_description
+[1.504s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ament_index/resource_index/parent_prefix_path/ackermann_description
+[1.515s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/environment/ament_prefix_path.sh
+[1.524s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/environment/ament_prefix_path.dsv
+[1.532s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/environment/path.sh
+[1.540s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/environment/path.dsv
+[1.551s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/local_setup.bash
+[1.558s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/local_setup.sh
+[1.565s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/local_setup.zsh
+[1.573s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/local_setup.dsv
+[1.582s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/package.dsv
+[1.591s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ament_index/resource_index/packages/ackermann_description
+[1.600s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/cmake/ackermann_descriptionConfig.cmake
+[1.607s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/cmake/ackermann_descriptionConfig-version.cmake
+[1.615s] -- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/package.xml

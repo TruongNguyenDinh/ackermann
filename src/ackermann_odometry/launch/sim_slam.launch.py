@@ -17,6 +17,8 @@ def generate_launch_description():
 
     slam_params_file = LaunchConfiguration('slam_params_file')
     slam_executable = LaunchConfiguration('slam_executable')
+    wheelbase = LaunchConfiguration('wheelbase')
+    gui = LaunchConfiguration('gui')
 
     # =========================================================
     # Package description
@@ -85,7 +87,8 @@ def generate_launch_description():
     start_description = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             description_launch
-        )
+        ),
+        launch_arguments={'wheelbase': wheelbase, 'gui': gui}.items(),
     )
 
     start_odom = TimerAction(
@@ -113,6 +116,16 @@ def generate_launch_description():
             'slam_executable',
             default_value='async_slam_toolbox_node',
             description='async_slam_toolbox_node (mapping) hoac localization_slam_toolbox_node (localization)'
+        ),
+        DeclareLaunchArgument(
+            'wheelbase',
+            default_value='0.3187',
+            description='Wheelbase in meters, passed to the robot Xacro',
+        ),
+        DeclareLaunchArgument(
+            'gui',
+            default_value='false',
+            description='Show the Gazebo GUI client',
         ),
 
         start_description,

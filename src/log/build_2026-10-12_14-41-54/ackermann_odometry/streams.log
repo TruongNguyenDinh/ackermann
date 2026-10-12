@@ -1,0 +1,25 @@
+[0.464s] Invoking command in '/home/ndtruong/workspace/ackermann_odometry': PYTHONPATH=/home/ndtruong/workspace/build/ackermann_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ackermann_odometry build --build-base /home/ndtruong/workspace/build/ackermann_odometry/build install --record /home/ndtruong/workspace/build/ackermann_odometry/install.log --install-scripts $base/lib/ackermann_odometry --single-version-externally-managed install_data
+[0.629s] running egg_info
+[0.630s] writing ../build/ackermann_odometry/ackermann_odometry.egg-info/PKG-INFO
+[0.630s] writing dependency_links to ../build/ackermann_odometry/ackermann_odometry.egg-info/dependency_links.txt
+[0.630s] writing entry points to ../build/ackermann_odometry/ackermann_odometry.egg-info/entry_points.txt
+[0.630s] writing requirements to ../build/ackermann_odometry/ackermann_odometry.egg-info/requires.txt
+[0.630s] writing top-level names to ../build/ackermann_odometry/ackermann_odometry.egg-info/top_level.txt
+[0.631s] reading manifest file '../build/ackermann_odometry/ackermann_odometry.egg-info/SOURCES.txt'
+[0.632s] writing manifest file '../build/ackermann_odometry/ackermann_odometry.egg-info/SOURCES.txt'
+[0.632s] running build
+[0.632s] running build_py
+[0.632s] copying ackermann_odometry/odom_node.py -> /home/ndtruong/workspace/build/ackermann_odometry/build/lib/ackermann_odometry
+[0.632s] running install
+[0.633s] running install_lib
+[0.634s] copying /home/ndtruong/workspace/build/ackermann_odometry/build/lib/ackermann_odometry/odom_node.py -> /home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages/ackermann_odometry
+[0.634s] byte-compiling /home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages/ackermann_odometry/odom_node.py to odom_node.cpython-310.pyc
+[0.635s] running install_data
+[0.635s] copying launch/sim_slam.launch.py -> /home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry/launch
+[0.635s] running install_egg_info
+[0.637s] removing '/home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages/ackermann_odometry-0.0.0-py3.10.egg-info' (and everything under it)
+[0.637s] Copying ../build/ackermann_odometry/ackermann_odometry.egg-info to /home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages/ackermann_odometry-0.0.0-py3.10.egg-info
+[0.638s] running install_scripts
+[0.653s] Installing ackermann_odometry script to /home/ndtruong/workspace/install/ackermann_odometry/lib/ackermann_odometry
+[0.654s] writing list of installed files to '/home/ndtruong/workspace/build/ackermann_odometry/install.log'
+[0.675s] Invoked command in '/home/ndtruong/workspace/ackermann_odometry' returned '0': PYTHONPATH=/home/ndtruong/workspace/build/ackermann_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ackermann_odometry build --build-base /home/ndtruong/workspace/build/ackermann_odometry/build install --record /home/ndtruong/workspace/build/ackermann_odometry/install.log --install-scripts $base/lib/ackermann_odometry --single-version-externally-managed install_data

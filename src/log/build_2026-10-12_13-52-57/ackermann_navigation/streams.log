@@ -1,0 +1,22 @@
+[0.483s] Invoking command in '/home/ndtruong/workspace/ackermann_navigation': AMENT_PREFIX_PATH=/home/ndtruong/workspace/install/ackermann_odometry:/home/ndtruong/workspace/install/ackermann_kinematics_py:/home/ndtruong/workspace/install/ackermann_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ndtruong/workspace/install/ackermann_description PYTHONPATH=/home/ndtruong/workspace/build/ackermann_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_navigation/lib/python3.10/site-packages:/home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages:/home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ackermann_navigation build --build-base /home/ndtruong/workspace/build/ackermann_navigation/build install --record /home/ndtruong/workspace/build/ackermann_navigation/install.log --install-scripts $base/lib/ackermann_navigation --single-version-externally-managed install_data
+[0.673s] running egg_info
+[0.673s] writing ../build/ackermann_navigation/ackermann_navigation.egg-info/PKG-INFO
+[0.673s] writing dependency_links to ../build/ackermann_navigation/ackermann_navigation.egg-info/dependency_links.txt
+[0.673s] writing entry points to ../build/ackermann_navigation/ackermann_navigation.egg-info/entry_points.txt
+[0.673s] writing requirements to ../build/ackermann_navigation/ackermann_navigation.egg-info/requires.txt
+[0.673s] writing top-level names to ../build/ackermann_navigation/ackermann_navigation.egg-info/top_level.txt
+[0.674s] reading manifest file '../build/ackermann_navigation/ackermann_navigation.egg-info/SOURCES.txt'
+[0.675s] writing manifest file '../build/ackermann_navigation/ackermann_navigation.egg-info/SOURCES.txt'
+[0.675s] running build
+[0.675s] running build_py
+[0.675s] running install
+[0.676s] running install_lib
+[0.678s] running install_data
+[0.680s] copying config/nav.yaml -> /home/ndtruong/workspace/install/ackermann_navigation/share/ackermann_navigation/config
+[0.680s] copying config/nav2_params.yaml -> /home/ndtruong/workspace/install/ackermann_navigation/share/ackermann_navigation/config
+[0.680s] running install_egg_info
+[0.681s] removing '/home/ndtruong/workspace/install/ackermann_navigation/lib/python3.10/site-packages/ackermann_navigation-0.0.0-py3.10.egg-info' (and everything under it)
+[0.681s] Copying ../build/ackermann_navigation/ackermann_navigation.egg-info to /home/ndtruong/workspace/install/ackermann_navigation/lib/python3.10/site-packages/ackermann_navigation-0.0.0-py3.10.egg-info
+[0.682s] running install_scripts
+[0.698s] writing list of installed files to '/home/ndtruong/workspace/build/ackermann_navigation/install.log'
+[0.720s] Invoked command in '/home/ndtruong/workspace/ackermann_navigation' returned '0': AMENT_PREFIX_PATH=/home/ndtruong/workspace/install/ackermann_odometry:/home/ndtruong/workspace/install/ackermann_kinematics_py:/home/ndtruong/workspace/install/ackermann_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ndtruong/workspace/install/ackermann_description PYTHONPATH=/home/ndtruong/workspace/build/ackermann_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_navigation/lib/python3.10/site-packages:/home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages:/home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ackermann_navigation build --build-base /home/ndtruong/workspace/build/ackermann_navigation/build install --record /home/ndtruong/workspace/build/ackermann_navigation/install.log --install-scripts $base/lib/ackermann_navigation --single-version-externally-managed install_data

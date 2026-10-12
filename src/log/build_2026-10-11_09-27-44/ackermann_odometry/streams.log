@@ -1,0 +1,28 @@
+[1.398s] Invoking command in '/home/ndtruong/workspace/build/ackermann_odometry': PYTHONPATH=/home/ndtruong/workspace/build/ackermann_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ndtruong/workspace/build/ackermann_odometry/build --no-deps symlink_data
+[1.669s] running develop
+[1.861s] running egg_info
+[1.861s] creating ackermann_odometry.egg-info
+[1.861s] writing ackermann_odometry.egg-info/PKG-INFO
+[1.861s] writing dependency_links to ackermann_odometry.egg-info/dependency_links.txt
+[1.862s] writing entry points to ackermann_odometry.egg-info/entry_points.txt
+[1.862s] writing requirements to ackermann_odometry.egg-info/requires.txt
+[1.862s] writing top-level names to ackermann_odometry.egg-info/top_level.txt
+[1.863s] writing manifest file 'ackermann_odometry.egg-info/SOURCES.txt'
+[1.864s] reading manifest file 'ackermann_odometry.egg-info/SOURCES.txt'
+[1.865s] writing manifest file 'ackermann_odometry.egg-info/SOURCES.txt'
+[1.867s] running build_ext
+[1.867s] Creating /home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages/ackermann-odometry.egg-link (link to .)
+[1.868s] Installing ackermann_odometry script to /home/ndtruong/workspace/install/ackermann_odometry/lib/ackermann_odometry
+[1.869s] 
+[1.871s] Installed /home/ndtruong/workspace/build/ackermann_odometry
+[1.871s] running symlink_data
+[1.871s] creating /home/ndtruong/workspace/install/ackermann_odometry/share/ament_index
+[1.871s] creating /home/ndtruong/workspace/install/ackermann_odometry/share/ament_index/resource_index
+[1.872s] creating /home/ndtruong/workspace/install/ackermann_odometry/share/ament_index/resource_index/packages
+[1.872s] symbolically linking /home/ndtruong/workspace/build/ackermann_odometry/resource/ackermann_odometry -> /home/ndtruong/workspace/install/ackermann_odometry/share/ament_index/resource_index/packages
+[1.872s] symbolically linking /home/ndtruong/workspace/build/ackermann_odometry/package.xml -> /home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry
+[1.872s] creating /home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry/launch
+[1.872s] symbolically linking /home/ndtruong/workspace/build/ackermann_odometry/launch/sim_slam.launch.py -> /home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry/launch
+[1.872s] symbolically linking /home/ndtruong/workspace/build/ackermann_odometry/launch/map_server.launch.py -> /home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry/launch
+[1.872s] creating /home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry/config
+[1.872s] symbolically linking /home/ndtruong/workspace/build/ackermann_odometry/config/slam.yaml -> /home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry/config

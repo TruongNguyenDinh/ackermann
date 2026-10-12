@@ -1,0 +1,218 @@
+[0.136s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-up-to', 'ackermann_navigation', 'ackermann_odometry', 'ackermann_kinematics_py', '--symlink-install']
+[0.136s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=['ackermann_navigation', 'ackermann_odometry', 'ackermann_kinematics_py'], packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7b2268d2fd90>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7b2268ed96c0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7b2268ed96c0>>)
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.325s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ndtruong/workspace'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_description) by extensions ['ignore', 'ignore_ament_install']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_description) by extension 'ignore'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_description) by extension 'ignore_ament_install'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_description) by extensions ['colcon_pkg']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_description) by extension 'colcon_pkg'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_description) by extensions ['colcon_meta']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_description) by extension 'colcon_meta'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_description) by extensions ['ros']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_description) by extension 'ros'
+[0.340s] DEBUG:colcon.colcon_core.package_identification:Package 'ackermann_description' with type 'ros.ament_cmake' and name 'ackermann_description'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics) by extensions ['ignore', 'ignore_ament_install']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics) by extension 'ignore'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics) by extension 'ignore_ament_install'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics) by extensions ['colcon_pkg']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics) by extension 'colcon_pkg'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics) by extensions ['colcon_meta']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics) by extension 'colcon_meta'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics) by extensions ['ros']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics) by extension 'ros'
+[0.341s] DEBUG:colcon.colcon_core.package_identification:Package 'ackermann_kinematics' with type 'ros.ament_cmake' and name 'ackermann_kinematics'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics_py) by extensions ['ignore', 'ignore_ament_install']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics_py) by extension 'ignore'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics_py) by extension 'ignore_ament_install'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics_py) by extensions ['colcon_pkg']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics_py) by extension 'colcon_pkg'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics_py) by extensions ['colcon_meta']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics_py) by extension 'colcon_meta'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics_py) by extensions ['ros']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_kinematics_py) by extension 'ros'
+[0.342s] DEBUG:colcon.colcon_core.package_identification:Package 'ackermann_kinematics_py' with type 'ros.ament_python' and name 'ackermann_kinematics_py'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_msg) by extensions ['ignore', 'ignore_ament_install']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_msg) by extension 'ignore'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_msg) by extension 'ignore_ament_install'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_msg) by extensions ['colcon_pkg']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_msg) by extension 'colcon_pkg'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_msg) by extensions ['colcon_meta']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_msg) by extension 'colcon_meta'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_msg) by extensions ['ros']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_msg) by extension 'ros'
+[0.343s] DEBUG:colcon.colcon_core.package_identification:Package 'ackermann_msg' with type 'ros.ament_cmake' and name 'ackermann_msg'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_navigation) by extension 'ignore'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_navigation) by extension 'ignore_ament_install'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_navigation) by extensions ['colcon_pkg']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_navigation) by extension 'colcon_pkg'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_navigation) by extensions ['colcon_meta']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_navigation) by extension 'colcon_meta'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_navigation) by extensions ['ros']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_navigation) by extension 'ros'
+[0.344s] DEBUG:colcon.colcon_core.package_identification:Package 'ackermann_navigation' with type 'ros.ament_python' and name 'ackermann_navigation'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_odometry) by extensions ['ignore', 'ignore_ament_install']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_odometry) by extension 'ignore'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_odometry) by extension 'ignore_ament_install'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_odometry) by extensions ['colcon_pkg']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_odometry) by extension 'colcon_pkg'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_odometry) by extensions ['colcon_meta']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_odometry) by extension 'colcon_meta'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_odometry) by extensions ['ros']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(ackermann_odometry) by extension 'ros'
+[0.345s] DEBUG:colcon.colcon_core.package_identification:Package 'ackermann_odometry' with type 'ros.ament_python' and name 'ackermann_odometry'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(small-warehouse-world) by extensions ['ignore', 'ignore_ament_install']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(small-warehouse-world) by extension 'ignore'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(small-warehouse-world) by extension 'ignore_ament_install'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(small-warehouse-world) by extensions ['colcon_pkg']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(small-warehouse-world) by extension 'colcon_pkg'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(small-warehouse-world) by extensions ['colcon_meta']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(small-warehouse-world) by extension 'colcon_meta'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(small-warehouse-world) by extensions ['ros']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(small-warehouse-world) by extension 'ros'
+[0.346s] DEBUG:colcon.colcon_core.package_identification:Package 'small-warehouse-world' with type 'ros.ament_cmake' and name 'aws_robomaker_small_warehouse_world'
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.379s] INFO:colcon.colcon_core.package_selection:Skipping package 'ackermann_msg' in 'ackermann_msg'
+[0.380s] INFO:colcon.colcon_core.package_selection:Skipping package 'ackermann_kinematics' in 'ackermann_kinematics'
+[0.380s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.380s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.383s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 274 installed packages in /opt/ros/humble
+[0.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_description' build argument 'cmake_args' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_description' build argument 'cmake_target' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.413s] DEBUG:colcon.colcon_core.verb:Building package 'ackermann_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ndtruong/workspace/build/ackermann_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ndtruong/workspace/install/ackermann_description', 'merge_install': False, 'path': '/home/ndtruong/workspace/ackermann_description', 'symlink_install': True, 'test_result_base': None}
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_kinematics_py' build argument 'cmake_args' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_kinematics_py' build argument 'cmake_target' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_kinematics_py' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_kinematics_py' build argument 'cmake_clean_cache' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_kinematics_py' build argument 'cmake_clean_first' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_kinematics_py' build argument 'cmake_force_configure' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_kinematics_py' build argument 'ament_cmake_args' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_kinematics_py' build argument 'catkin_cmake_args' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_kinematics_py' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.413s] DEBUG:colcon.colcon_core.verb:Building package 'ackermann_kinematics_py' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ndtruong/workspace/build/ackermann_kinematics_py', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ndtruong/workspace/install/ackermann_kinematics_py', 'merge_install': False, 'path': '/home/ndtruong/workspace/ackermann_kinematics_py', 'symlink_install': True, 'test_result_base': None}
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_odometry' build argument 'cmake_args' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_odometry' build argument 'cmake_target' from command line to 'None'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_odometry' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_odometry' build argument 'cmake_clean_cache' from command line to 'False'
+[0.413s] Level 5:colcon.colcon_core.verb:set package 'ackermann_odometry' build argument 'cmake_clean_first' from command line to 'False'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'ackermann_odometry' build argument 'cmake_force_configure' from command line to 'False'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'ackermann_odometry' build argument 'ament_cmake_args' from command line to 'None'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'ackermann_odometry' build argument 'catkin_cmake_args' from command line to 'None'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'ackermann_odometry' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.414s] DEBUG:colcon.colcon_core.verb:Building package 'ackermann_odometry' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ndtruong/workspace/build/ackermann_odometry', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ndtruong/workspace/install/ackermann_odometry', 'merge_install': False, 'path': '/home/ndtruong/workspace/ackermann_odometry', 'symlink_install': True, 'test_result_base': None}
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'cmake_args' from command line to 'None'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'cmake_target' from command line to 'None'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'cmake_clean_cache' from command line to 'False'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'cmake_clean_first' from command line to 'False'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'cmake_force_configure' from command line to 'False'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'ament_cmake_args' from command line to 'None'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'catkin_cmake_args' from command line to 'None'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.414s] DEBUG:colcon.colcon_core.verb:Building package 'aws_robomaker_small_warehouse_world' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ndtruong/workspace/build/aws_robomaker_small_warehouse_world', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world', 'merge_install': False, 'path': '/home/ndtruong/workspace/small-warehouse-world', 'symlink_install': True, 'test_result_base': None}
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'ackermann_navigation' build argument 'cmake_args' from command line to 'None'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'ackermann_navigation' build argument 'cmake_target' from command line to 'None'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'ackermann_navigation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.414s] Level 5:colcon.colcon_core.verb:set package 'ackermann_navigation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'ackermann_navigation' build argument 'cmake_clean_first' from command line to 'False'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'ackermann_navigation' build argument 'cmake_force_configure' from command line to 'False'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'ackermann_navigation' build argument 'ament_cmake_args' from command line to 'None'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'ackermann_navigation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.415s] Level 5:colcon.colcon_core.verb:set package 'ackermann_navigation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.415s] DEBUG:colcon.colcon_core.verb:Building package 'ackermann_navigation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ndtruong/workspace/build/ackermann_navigation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ndtruong/workspace/install/ackermann_navigation', 'merge_install': False, 'path': '/home/ndtruong/workspace/ackermann_navigation', 'symlink_install': True, 'test_result_base': None}
+[0.415s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.416s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.416s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ndtruong/workspace/ackermann_description' with build type 'ament_cmake'
+[0.416s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ndtruong/workspace/ackermann_description'
+[0.419s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.420s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.420s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.422s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ndtruong/workspace/ackermann_kinematics_py' with build type 'ament_python'
+[0.423s] Level 1:colcon.colcon_core.shell:create_environment_hook('ackermann_kinematics_py', 'ament_prefix_path')
+[0.423s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ndtruong/workspace/install/ackermann_kinematics_py/share/ackermann_kinematics_py/hook/ament_prefix_path.ps1'
+[0.424s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ndtruong/workspace/install/ackermann_kinematics_py/share/ackermann_kinematics_py/hook/ament_prefix_path.dsv'
+[0.424s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ndtruong/workspace/install/ackermann_kinematics_py/share/ackermann_kinematics_py/hook/ament_prefix_path.sh'
+[0.425s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.425s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.427s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ndtruong/workspace/ackermann_odometry' with build type 'ament_python'
+[0.427s] Level 1:colcon.colcon_core.shell:create_environment_hook('ackermann_odometry', 'ament_prefix_path')
+[0.427s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry/hook/ament_prefix_path.ps1'
+[0.428s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry/hook/ament_prefix_path.dsv'
+[0.429s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry/hook/ament_prefix_path.sh'
+[0.429s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.429s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.431s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ndtruong/workspace/small-warehouse-world' with build type 'ament_cmake'
+[0.431s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ndtruong/workspace/small-warehouse-world'
+[0.432s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.432s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.438s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ndtruong/workspace/build/ackermann_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ndtruong/workspace/ackermann_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ndtruong/workspace/install/ackermann_description
+[0.683s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ndtruong/workspace/ackermann_kinematics_py'
+[0.683s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.683s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.936s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ndtruong/workspace/ackermann_odometry'
+[0.936s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.936s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.942s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ndtruong/workspace/build/aws_robomaker_small_warehouse_world': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ndtruong/workspace/small-warehouse-world -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world
+[1.441s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: bdist, saveopts, test, install, develop, clean, install_data, dist_info, install_lib, install_headers, register, build_scripts, alias, build_clib, upload, bdist_egg, egg_info, setopt, easy_install, build_ext, bdist_rpm, build_py, build, install_scripts, sdist, symlink_data, check, rotate, bdist_dumb, install_egg_info, upload_docs
+[1.442s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: bdist, saveopts, test, install, develop, clean, install_data, dist_info, install_lib, install_headers, register, build_scripts, alias, build_clib, upload, bdist_egg, egg_info, setopt, easy_install, build_ext, bdist_rpm, build_py, build, install_scripts, sdist, symlink_data, check, rotate, bdist_dumb, install_egg_info, upload_docs
+[1.625s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ndtruong/workspace/build/ackermann_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ndtruong/workspace/ackermann_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ndtruong/workspace/install/ackermann_description
+[1.626s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ndtruong/workspace/build/ackermann_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ndtruong/workspace/build/ackermann_description -- -j8 -l8
+[1.770s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ndtruong/workspace/build/ackermann_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ndtruong/workspace/build/ackermann_description -- -j8 -l8
+[1.785s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ndtruong/workspace/build/ackermann_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ndtruong/workspace/build/ackermann_description
+[1.824s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --no-find-links, --zip-ok, --egg-path, --find-links, --upgrade, --dry-run, --help, --script-dir, --uninstall, --site-dirs, --always-copy, --record, --no-deps, --allow-hosts, --quiet, --always-unzip, --version, --install-layout, --user, --multi-version, --no-user-cfg, --prefix, --force-installation-into-system-dir, --index-url, --build-directory, --local-snapshots-ok, --optimize, --exclude-scripts, --editable, --verbose, --install-dir
+[1.826s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ndtruong/workspace/build/ackermann_odometry': PYTHONPATH=/home/ndtruong/workspace/build/ackermann_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ndtruong/workspace/build/ackermann_odometry/build --no-deps symlink_data
+[1.850s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ndtruong/workspace/build/aws_robomaker_small_warehouse_world' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ndtruong/workspace/small-warehouse-world -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world
+[1.864s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aws_robomaker_small_warehouse_world)
+[1.872s] Level 1:colcon.colcon_core.environment:checking '/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world' for CMake module files
+[1.873s] Level 1:colcon.colcon_core.environment:checking '/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world' for CMake config files
+[1.873s] Level 1:colcon.colcon_core.environment:checking '/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world/bin'
+[1.873s] Level 1:colcon.colcon_core.environment:checking '/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world/lib/pkgconfig/aws_robomaker_small_warehouse_world.pc'
+[1.874s] Level 1:colcon.colcon_core.environment:checking '/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world/lib/python3.10/site-packages'
+[1.874s] Level 1:colcon.colcon_core.environment:checking '/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world/bin'
+[1.874s] INFO:colcon.colcon_core.shell:Creating package script '/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/package.ps1'
+[1.876s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/package.dsv'
+[1.877s] INFO:colcon.colcon_core.shell:Creating package script '/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/package.sh'
+[1.879s] INFO:colcon.colcon_core.shell:Creating package script '/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/package.bash'
+[1.881s] INFO:colcon.colcon_core.shell:Creating package script '/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/package.zsh'
+[1.882s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world/share/colcon-core/packages/aws_robomaker_small_warehouse_world)

@@ -1,0 +1,3 @@
+[console_scripts]
+goal_pose_converter = ackermann_navigation.goal_pose_converter:main
+

@@ -25,6 +25,10 @@ setup(
             os.path.join('share', package_name, 'config'),
             glob('config/*.yaml')
         ),
+        (
+            os.path.join('share', package_name, 'behavior_trees'),
+            glob('behavior_trees/*.xml')
+        ),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -38,7 +42,6 @@ setup(
         ],
     },
     entry_points={
-        'console_scripts': [
-        ],
+        'console_scripts': [],
     },
 )

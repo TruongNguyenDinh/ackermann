@@ -1,0 +1,33 @@
+[0.720s] Invoking command in '/home/ndtruong/workspace/build/ackermann_navigation': AMENT_PREFIX_PATH=/home/ndtruong/workspace/install/ackermann_odometry:/home/ndtruong/workspace/install/ackermann_kinematics_py:/home/ndtruong/workspace/install/ackermann_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ndtruong/workspace/install/ackermann_description PYTHONPATH=/home/ndtruong/workspace/build/ackermann_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_navigation/lib/python3.10/site-packages:/home/ndtruong/workspace/build/ackermann_odometry:/home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages:/home/ndtruong/workspace/build/ackermann_kinematics_py:/home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ndtruong/workspace/build/ackermann_navigation/build --no-deps symlink_data
+[0.930s] running develop
+[1.043s] running egg_info
+[1.043s] creating ackermann_navigation.egg-info
+[1.043s] writing ackermann_navigation.egg-info/PKG-INFO
+[1.043s] writing dependency_links to ackermann_navigation.egg-info/dependency_links.txt
+[1.044s] writing entry points to ackermann_navigation.egg-info/entry_points.txt
+[1.044s] writing requirements to ackermann_navigation.egg-info/requires.txt
+[1.044s] writing top-level names to ackermann_navigation.egg-info/top_level.txt
+[1.044s] writing manifest file 'ackermann_navigation.egg-info/SOURCES.txt'
+[1.045s] reading manifest file 'ackermann_navigation.egg-info/SOURCES.txt'
+[1.045s] writing manifest file 'ackermann_navigation.egg-info/SOURCES.txt'
+[1.046s] running build_ext
+[1.047s] Creating /home/ndtruong/workspace/install/ackermann_navigation/lib/python3.10/site-packages/ackermann-navigation.egg-link (link to .)
+[1.047s] 
+[1.047s] Installed /home/ndtruong/workspace/build/ackermann_navigation
+[1.047s] running symlink_data
+[1.048s] creating /home/ndtruong/workspace/install/ackermann_navigation/share/ament_index
+[1.048s] creating /home/ndtruong/workspace/install/ackermann_navigation/share/ament_index/resource_index
+[1.048s] creating /home/ndtruong/workspace/install/ackermann_navigation/share/ament_index/resource_index/packages
+[1.048s] symbolically linking /home/ndtruong/workspace/build/ackermann_navigation/resource/ackermann_navigation -> /home/ndtruong/workspace/install/ackermann_navigation/share/ament_index/resource_index/packages
+[1.048s] symbolically linking /home/ndtruong/workspace/build/ackermann_navigation/package.xml -> /home/ndtruong/workspace/install/ackermann_navigation/share/ackermann_navigation
+[1.048s] creating /home/ndtruong/workspace/install/ackermann_navigation/share/ackermann_navigation/launch
+[1.048s] symbolically linking /home/ndtruong/workspace/build/ackermann_navigation/launch/nav2_bringup.launch.py -> /home/ndtruong/workspace/install/ackermann_navigation/share/ackermann_navigation/launch
+[1.048s] symbolically linking /home/ndtruong/workspace/build/ackermann_navigation/launch/bringup_localization.launch.py -> /home/ndtruong/workspace/install/ackermann_navigation/share/ackermann_navigation/launch
+[1.048s] creating /home/ndtruong/workspace/install/ackermann_navigation/share/ackermann_navigation/config
+[1.048s] symbolically linking /home/ndtruong/workspace/build/ackermann_navigation/config/nav.yaml -> /home/ndtruong/workspace/install/ackermann_navigation/share/ackermann_navigation/config
+[1.048s] symbolically linking /home/ndtruong/workspace/build/ackermann_navigation/config/slam.yaml -> /home/ndtruong/workspace/install/ackermann_navigation/share/ackermann_navigation/config
+[1.048s] symbolically linking /home/ndtruong/workspace/build/ackermann_navigation/config/nav2_params.yaml -> /home/ndtruong/workspace/install/ackermann_navigation/share/ackermann_navigation/config
+[1.048s] creating /home/ndtruong/workspace/install/ackermann_navigation/share/ackermann_navigation/behavior_trees
+[1.049s] symbolically linking /home/ndtruong/workspace/build/ackermann_navigation/behavior_trees/navigate_through_poses_ackermann.xml -> /home/ndtruong/workspace/install/ackermann_navigation/share/ackermann_navigation/behavior_trees
+[1.049s] symbolically linking /home/ndtruong/workspace/build/ackermann_navigation/behavior_trees/navigate_to_pose_ackermann.xml -> /home/ndtruong/workspace/install/ackermann_navigation/share/ackermann_navigation/behavior_trees
+[1.072s] Invoked command in '/home/ndtruong/workspace/build/ackermann_navigation' returned '0': AMENT_PREFIX_PATH=/home/ndtruong/workspace/install/ackermann_odometry:/home/ndtruong/workspace/install/ackermann_kinematics_py:/home/ndtruong/workspace/install/ackermann_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ndtruong/workspace/install/ackermann_description PYTHONPATH=/home/ndtruong/workspace/build/ackermann_navigation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_navigation/lib/python3.10/site-packages:/home/ndtruong/workspace/build/ackermann_odometry:/home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages:/home/ndtruong/workspace/build/ackermann_kinematics_py:/home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ndtruong/workspace/build/ackermann_navigation/build --no-deps symlink_data

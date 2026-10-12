@@ -1,0 +1,1 @@
+/home/ndtruong/workspace/ackermann_navigation/launch/nav2_bringup.launch.py

@@ -1,0 +1,36 @@
+[0.495s] Invoking command in '/home/ndtruong/workspace/build/ackermann_kinematics_py': PYTHONPATH=/home/ndtruong/workspace/build/ackermann_kinematics_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/ndtruong/workspace/build/ackermann_kinematics_py/build
+[0.698s] running develop
+[0.814s] Removing /home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages/ackermann-kinematics-py.egg-link (link to .)
+[0.837s] Invoked command in '/home/ndtruong/workspace/build/ackermann_kinematics_py' returned '0': PYTHONPATH=/home/ndtruong/workspace/build/ackermann_kinematics_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/ndtruong/workspace/build/ackermann_kinematics_py/build
+[0.839s] Invoking command in '/home/ndtruong/workspace/ackermann_kinematics_py': PYTHONPATH=/home/ndtruong/workspace/build/ackermann_kinematics_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ackermann_kinematics_py build --build-base /home/ndtruong/workspace/build/ackermann_kinematics_py/build install --record /home/ndtruong/workspace/build/ackermann_kinematics_py/install.log --install-scripts $base/lib/ackermann_kinematics_py --single-version-externally-managed install_data --force
+[1.032s] running egg_info
+[1.032s] writing ../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info/PKG-INFO
+[1.032s] writing dependency_links to ../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info/dependency_links.txt
+[1.033s] writing entry points to ../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info/entry_points.txt
+[1.033s] writing requirements to ../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info/requires.txt
+[1.033s] writing top-level names to ../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info/top_level.txt
+[1.034s] reading manifest file '../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info/SOURCES.txt'
+[1.035s] writing manifest file '../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info/SOURCES.txt'
+[1.035s] running build
+[1.035s] running build_py
+[1.035s] creating /home/ndtruong/workspace/build/ackermann_kinematics_py/build
+[1.035s] creating /home/ndtruong/workspace/build/ackermann_kinematics_py/build/lib
+[1.035s] creating /home/ndtruong/workspace/build/ackermann_kinematics_py/build/lib/ackermann_kinematics_py
+[1.035s] copying ackermann_kinematics_py/ackermann.py -> /home/ndtruong/workspace/build/ackermann_kinematics_py/build/lib/ackermann_kinematics_py
+[1.035s] copying ackermann_kinematics_py/__init__.py -> /home/ndtruong/workspace/build/ackermann_kinematics_py/build/lib/ackermann_kinematics_py
+[1.035s] running install
+[1.035s] running install_lib
+[1.037s] creating /home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages/ackermann_kinematics_py
+[1.037s] copying /home/ndtruong/workspace/build/ackermann_kinematics_py/build/lib/ackermann_kinematics_py/ackermann.py -> /home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages/ackermann_kinematics_py
+[1.037s] copying /home/ndtruong/workspace/build/ackermann_kinematics_py/build/lib/ackermann_kinematics_py/__init__.py -> /home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages/ackermann_kinematics_py
+[1.037s] byte-compiling /home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages/ackermann_kinematics_py/ackermann.py to ackermann.cpython-310.pyc
+[1.039s] byte-compiling /home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages/ackermann_kinematics_py/__init__.py to __init__.cpython-310.pyc
+[1.039s] running install_data
+[1.039s] copying resource/ackermann_kinematics_py -> /home/ndtruong/workspace/install/ackermann_kinematics_py/share/ament_index/resource_index/packages
+[1.039s] copying package.xml -> /home/ndtruong/workspace/install/ackermann_kinematics_py/share/ackermann_kinematics_py
+[1.039s] running install_egg_info
+[1.041s] Copying ../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info to /home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages/ackermann_kinematics_py-0.0.0-py3.10.egg-info
+[1.041s] running install_scripts
+[1.059s] Installing ackerman_kinematic script to /home/ndtruong/workspace/install/ackermann_kinematics_py/lib/ackermann_kinematics_py
+[1.060s] writing list of installed files to '/home/ndtruong/workspace/build/ackermann_kinematics_py/install.log'
+[1.081s] Invoked command in '/home/ndtruong/workspace/ackermann_kinematics_py' returned '0': PYTHONPATH=/home/ndtruong/workspace/build/ackermann_kinematics_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ackermann_kinematics_py build --build-base /home/ndtruong/workspace/build/ackermann_kinematics_py/build install --record /home/ndtruong/workspace/build/ackermann_kinematics_py/install.log --install-scripts $base/lib/ackermann_kinematics_py --single-version-externally-managed install_data --force

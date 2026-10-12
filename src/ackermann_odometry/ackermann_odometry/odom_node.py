@@ -19,8 +19,12 @@ class AckermannOdometry(Node):
         # ==========================
         # Robot geometry
         # ==========================
-        self.wheel_radius = 0.05      # m
-        self.wheelbase = 0.3187       # m
+        # Current defaults match the Xacro estimate; tune from physical
+        # measurements when rear track and wheel radius are confirmed.
+        self.declare_parameter('wheel_radius', 0.05)
+        self.declare_parameter('rear_track', 0.3118)
+        self.wheel_radius = self.get_parameter('wheel_radius').value
+        self.track_width = self.get_parameter('rear_track').value
 
         # ==========================
         # Robot pose
@@ -55,19 +59,8 @@ class AckermannOdometry(Node):
     def joint_state_callback(self, msg):
         left_rear_velocity = 0.0
         right_rear_velocity = 0.0
-        left_steering_angle = 0.0
-        right_steering_angle = 0.0
-
         # Trích xuất thông số khớp từ JointState
         for i, name in enumerate(msg.name):
-            if i >= len(msg.position):
-                continue
-
-            if name == 'front_left_steer_joint':
-                left_steering_angle = msg.position[i]
-            elif name == 'front_right_steer_joint':
-                right_steering_angle = msg.position[i]
-
             if i < len(msg.velocity):
                 if name == 'rear_left_wheel_joint':
                     left_rear_velocity = msg.velocity[i]
@@ -84,6 +77,11 @@ class AckermannOdometry(Node):
         dt = (current_time - self.last_time).nanoseconds * 1e-9
 
         if dt <= 0.0:
+            # Gazebo can restart its simulation clock at zero while this
+            # node remains alive. Rebase the integration timestamp so the
+            # first JointState from the new clock epoch does not freeze
+            # odometry until it catches up with the old timestamp.
+            self.last_time = current_time
             return
 
         self.last_time = current_time
@@ -94,13 +92,13 @@ class AckermannOdometry(Node):
         v_left = left_rear_velocity * self.wheel_radius
         v_right = right_rear_velocity * self.wheel_radius
         v = (v_left + v_right) / 2.0
-
-        delta = (left_steering_angle + right_steering_angle) / 2.0
-        yaw_rate = (v / self.wheelbase) * math.tan(delta)
+        yaw_rate = (v_right - v_left) / self.track_width
 
         # ==========================
         # Integrate pose
         # ==========================
+        # base_footprint is at the rear axle, where wheel odometry's
+        # longitudinal velocity has no lateral offset term.
         self.x += v * math.cos(self.yaw) * dt
         self.y += v * math.sin(self.yaw) * dt
         self.yaw += yaw_rate * dt
@@ -114,7 +112,7 @@ class AckermannOdometry(Node):
         transform = TransformStamped()
         transform.header.stamp = msg.header.stamp
         transform.header.frame_id = 'odom'
-        transform.child_frame_id = 'base_link'
+        transform.child_frame_id = 'base_footprint'
 
         transform.transform.translation.x = self.x
         transform.transform.translation.y = self.y
@@ -132,7 +130,7 @@ class AckermannOdometry(Node):
         odom = Odometry()
         odom.header.stamp = msg.header.stamp
         odom.header.frame_id = 'odom'
-        odom.child_frame_id = 'base_link'
+        odom.child_frame_id = 'base_footprint'
 
         odom.pose.pose.position.x = self.x
         odom.pose.pose.position.y = self.y

@@ -1,0 +1,17 @@
+[0.921s] Invoking command in '/home/ndtruong/workspace/build/ackermann_odometry': PYTHONPATH=/home/ndtruong/workspace/build/ackermann_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ndtruong/workspace/build/ackermann_odometry/build --no-deps symlink_data
+[1.123s] running develop
+[1.235s] running egg_info
+[1.236s] writing ackermann_odometry.egg-info/PKG-INFO
+[1.236s] writing dependency_links to ackermann_odometry.egg-info/dependency_links.txt
+[1.236s] writing entry points to ackermann_odometry.egg-info/entry_points.txt
+[1.236s] writing requirements to ackermann_odometry.egg-info/requires.txt
+[1.236s] writing top-level names to ackermann_odometry.egg-info/top_level.txt
+[1.237s] reading manifest file 'ackermann_odometry.egg-info/SOURCES.txt'
+[1.238s] writing manifest file 'ackermann_odometry.egg-info/SOURCES.txt'
+[1.239s] running build_ext
+[1.239s] Creating /home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages/ackermann-odometry.egg-link (link to .)
+[1.240s] Installing ackermann_odometry script to /home/ndtruong/workspace/install/ackermann_odometry/lib/ackermann_odometry
+[1.240s] 
+[1.240s] Installed /home/ndtruong/workspace/build/ackermann_odometry
+[1.241s] running symlink_data
+[1.284s] Invoked command in '/home/ndtruong/workspace/build/ackermann_odometry' returned '0': PYTHONPATH=/home/ndtruong/workspace/build/ackermann_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ndtruong/workspace/build/ackermann_odometry/build --no-deps symlink_data

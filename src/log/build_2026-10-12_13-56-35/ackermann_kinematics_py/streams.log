@@ -1,0 +1,24 @@
+[0.783s] Invoking command in '/home/ndtruong/workspace/ackermann_kinematics_py': PYTHONPATH=/home/ndtruong/workspace/build/ackermann_kinematics_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ackermann_kinematics_py build --build-base /home/ndtruong/workspace/build/ackermann_kinematics_py/build install --record /home/ndtruong/workspace/build/ackermann_kinematics_py/install.log --install-scripts $base/lib/ackermann_kinematics_py --single-version-externally-managed install_data
+[0.965s] running egg_info
+[0.965s] writing ../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info/PKG-INFO
+[0.965s] writing dependency_links to ../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info/dependency_links.txt
+[0.966s] writing entry points to ../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info/entry_points.txt
+[0.966s] writing requirements to ../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info/requires.txt
+[0.966s] writing top-level names to ../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info/top_level.txt
+[0.967s] reading manifest file '../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info/SOURCES.txt'
+[0.968s] writing manifest file '../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info/SOURCES.txt'
+[0.968s] running build
+[0.968s] running build_py
+[0.968s] copying ackermann_kinematics_py/ackermann.py -> /home/ndtruong/workspace/build/ackermann_kinematics_py/build/lib/ackermann_kinematics_py
+[0.969s] running install
+[0.969s] running install_lib
+[0.970s] copying /home/ndtruong/workspace/build/ackermann_kinematics_py/build/lib/ackermann_kinematics_py/ackermann.py -> /home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages/ackermann_kinematics_py
+[0.971s] byte-compiling /home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages/ackermann_kinematics_py/ackermann.py to ackermann.cpython-310.pyc
+[0.978s] running install_data
+[0.978s] running install_egg_info
+[0.978s] removing '/home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages/ackermann_kinematics_py-0.0.0-py3.10.egg-info' (and everything under it)
+[0.978s] Copying ../build/ackermann_kinematics_py/ackermann_kinematics_py.egg-info to /home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages/ackermann_kinematics_py-0.0.0-py3.10.egg-info
+[0.978s] running install_scripts
+[0.993s] Installing ackerman_kinematic script to /home/ndtruong/workspace/install/ackermann_kinematics_py/lib/ackermann_kinematics_py
+[0.993s] writing list of installed files to '/home/ndtruong/workspace/build/ackermann_kinematics_py/install.log'
+[1.013s] Invoked command in '/home/ndtruong/workspace/ackermann_kinematics_py' returned '0': PYTHONPATH=/home/ndtruong/workspace/build/ackermann_kinematics_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_kinematics_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ackermann_kinematics_py build --build-base /home/ndtruong/workspace/build/ackermann_kinematics_py/build install --record /home/ndtruong/workspace/build/ackermann_kinematics_py/install.log --install-scripts $base/lib/ackermann_kinematics_py --single-version-externally-managed install_data

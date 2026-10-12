@@ -1,0 +1,20 @@
+running egg_info
+writing ../build/ackermann_odometry/ackermann_odometry.egg-info/PKG-INFO
+writing dependency_links to ../build/ackermann_odometry/ackermann_odometry.egg-info/dependency_links.txt
+writing entry points to ../build/ackermann_odometry/ackermann_odometry.egg-info/entry_points.txt
+writing requirements to ../build/ackermann_odometry/ackermann_odometry.egg-info/requires.txt
+writing top-level names to ../build/ackermann_odometry/ackermann_odometry.egg-info/top_level.txt
+reading manifest file '../build/ackermann_odometry/ackermann_odometry.egg-info/SOURCES.txt'
+writing manifest file '../build/ackermann_odometry/ackermann_odometry.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying config/slam.yaml -> /home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry/config
+running install_egg_info
+removing '/home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages/ackermann_odometry-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../build/ackermann_odometry/ackermann_odometry.egg-info to /home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages/ackermann_odometry-0.0.0-py3.10.egg-info
+running install_scripts
+Installing ackermann_odometry script to /home/ndtruong/workspace/install/ackermann_odometry/lib/ackermann_odometry
+writing list of installed files to '/home/ndtruong/workspace/build/ackermann_odometry/install.log'

@@ -4,17 +4,36 @@
     <!-- Include wheel macro -->
     <xacro:include filename="wheels.xacro" />
 
-    <xacro:macro name="core">
-        <!-- Base link -->
+    <xacro:macro name="body_section" params="x length width height">
+        <visual>
+            <origin xyz="${x} 0 0"/>
+            <geometry><box size="${length} ${width} ${height}"/></geometry>
+            <material name="body_material"><color rgba="0.82 0.82 0.82 1.0"/></material>
+        </visual>
+        <collision>
+            <origin xyz="${x} 0 0"/>
+            <geometry><box size="${length} ${width} ${height}"/></geometry>
+        </collision>
+    </xacro:macro>
+
+    <xacro:macro name="core" params="vehicle_length vehicle_width wheelbase front_track rear_track wheel_radius wheel_width steering_axis_offset front_body_width middle_body_width rear_body_width front_body_length middle_body_length rear_body_length chamfer_length body_height">
+        <!-- base_footprint is the rear-axle ground reference (x=0). -->
+        <link name="base_footprint"/>
+        <joint name="base_footprint_to_base_link_joint" type="fixed">
+            <origin xyz="${wheelbase / 2.0} 0 ${wheel_radius}" rpy="0.0 0.0 0.0"/>
+            <parent link="base_footprint"/>
+            <child link="base_link"/>
+        </joint>
         <link name="base_link"/>
 
-        <!-- Base footprint -->
-        <joint name="base_footprint_to_base_link_joint" type="fixed">
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <!-- Keep the legacy rear_axle link and joint names. Its XY location
+             matches base_footprint; its Z is the wheel axle height. -->
+        <joint name="base_link_to_rear_axle_joint" type="fixed">
+            <origin xyz="${-wheelbase / 2.0} 0.0 0.0" rpy="0.0 0.0 0.0"/>
             <parent link="base_link"/>
-            <child link="base_footprint"/>
+            <child link="rear_axle"/>
         </joint>
-        <link name="base_footprint" />
+        <link name="rear_axle" />
 
         <!-- Chassis -->
         <joint name="chassis_joint" type="fixed">
@@ -23,22 +42,17 @@
             <origin xyz="0.0 0.0 0.0"/>
         </joint>
         <link name="chassis">
-            <visual>
-                <origin xyz="0.0 0.0 0.0"/>
-                <geometry>
-                    <box size="0.3865 0.238 0.0184"/>
-                </geometry>
-                <material name="">
-                    <color rgba="1.0 1.0 1.0 1.0"/>
-                    <texture filename=""/>
-                </material>
-            </visual>
-            <collision>
-                <origin xyz="0.0 0.0 0.0"/>
-                 <geometry>
-                    <box size="0.3865 0.238 0.0184"/>
-                </geometry>
-            </collision>
+            <!-- Profile defaults are adjustable estimates; sections abut
+                 without overlap to keep the simplified collision stable. -->
+            <xacro:body_section x="${-vehicle_length / 2.0 + rear_body_length / 2.0}" length="${rear_body_length}" width="${rear_body_width}" height="${body_height}"/>
+            <xacro:body_section x="${-vehicle_length / 2.0 + rear_body_length + chamfer_length / 6.0}" length="${chamfer_length / 3.0}" width="${(rear_body_width * 2.0 + middle_body_width) / 3.0}" height="${body_height}"/>
+            <xacro:body_section x="${-vehicle_length / 2.0 + rear_body_length + chamfer_length / 2.0}" length="${chamfer_length / 3.0}" width="${(rear_body_width + middle_body_width) / 2.0}" height="${body_height}"/>
+            <xacro:body_section x="${-vehicle_length / 2.0 + rear_body_length + 5.0 * chamfer_length / 6.0}" length="${chamfer_length / 3.0}" width="${(rear_body_width + middle_body_width * 2.0) / 3.0}" height="${body_height}"/>
+            <xacro:body_section x="${-vehicle_length / 2.0 + rear_body_length + chamfer_length + middle_body_length / 2.0}" length="${middle_body_length}" width="${middle_body_width}" height="${body_height}"/>
+            <xacro:body_section x="${vehicle_length / 2.0 - front_body_length - 5.0 * chamfer_length / 6.0}" length="${chamfer_length / 3.0}" width="${(front_body_width + middle_body_width * 2.0) / 3.0}" height="${body_height}"/>
+            <xacro:body_section x="${vehicle_length / 2.0 - front_body_length - chamfer_length / 2.0}" length="${chamfer_length / 3.0}" width="${(front_body_width + middle_body_width) / 2.0}" height="${body_height}"/>
+            <xacro:body_section x="${vehicle_length / 2.0 - front_body_length - chamfer_length / 6.0}" length="${chamfer_length / 3.0}" width="${(front_body_width * 2.0 + middle_body_width) / 3.0}" height="${body_height}"/>
+            <xacro:body_section x="${vehicle_length / 2.0 - front_body_length / 2.0}" length="${front_body_length}" width="${front_body_width}" height="${body_height}"/>
             <inertial>
                 <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
                 <mass value="1.0"/>
@@ -46,12 +60,15 @@
             </inertial>
         </link>
 
-        <!-- Wheel -->
-        <xacro:wheel_unit prefix="front_left"  parent="base_link" x_pos="0.15935"  y_pos="0.119"  side_reflect="1"  is_steer="true" />
-        <xacro:wheel_unit prefix="front_right" parent="base_link" x_pos="0.15935"  y_pos="-0.119" side_reflect="-1" is_steer="true" />
+        <!-- Front wheels are positioned relative to the chassis-centered
+             base_link. The rear wheels are children of rear_axle, whose frame
+             is at the rear axle height and remains coincident with x=0 in
+             base_footprint. -->
+        <xacro:wheel_unit prefix="front_left"  parent="base_link" x_pos="${wheelbase / 2.0}" y_pos="${front_track / 2.0}" z_pos="0.0" side_reflect="1" is_steer="true" wheel_radius="${wheel_radius}" wheel_width="${wheel_width}" steering_axis_offset="${steering_axis_offset}" />
+        <xacro:wheel_unit prefix="front_right" parent="base_link" x_pos="${wheelbase / 2.0}" y_pos="${-front_track / 2.0}" z_pos="0.0" side_reflect="-1" is_steer="true" wheel_radius="${wheel_radius}" wheel_width="${wheel_width}" steering_axis_offset="${steering_axis_offset}" />
 
-        <xacro:wheel_unit prefix="rear_left"   parent="base_link" x_pos="-0.15935" y_pos="0.119"  side_reflect="1"  is_steer="false" />
-        <xacro:wheel_unit prefix="rear_right"  parent="base_link" x_pos="-0.15935" y_pos="-0.119" side_reflect="-1" is_steer="false" />
+        <xacro:wheel_unit prefix="rear_left"   parent="rear_axle" x_pos="0.0" y_pos="${rear_track / 2.0}" z_pos="0.0" side_reflect="1" is_steer="false" wheel_radius="${wheel_radius}" wheel_width="${wheel_width}" steering_axis_offset="${steering_axis_offset}" />
+        <xacro:wheel_unit prefix="rear_right"  parent="rear_axle" x_pos="0.0" y_pos="${-rear_track / 2.0}" z_pos="0.0" side_reflect="-1" is_steer="false" wheel_radius="${wheel_radius}" wheel_width="${wheel_width}" steering_axis_offset="${steering_axis_offset}" />
 
         <!-- Laser mount -->
         <joint name="base_laser_joint" type="fixed">

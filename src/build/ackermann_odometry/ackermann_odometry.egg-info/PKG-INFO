@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ackermann-odometry
+Version: 0.0.0
+Summary: Ackermann vehicle odometry
+Home-page: UNKNOWN
+Maintainer: rosdev
+Maintainer-email: truongnd1124@gmail.com
+License: Apache-2.0
+Platform: UNKNOWN
+Provides-Extra: test
+
+UNKNOWN
+

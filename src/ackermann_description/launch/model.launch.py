@@ -11,6 +11,7 @@ from launch.actions import (
     ExecuteProcess,
     SetEnvironmentVariable
 )
+from launch.conditions import IfCondition
 from launch.event_handlers import OnProcessExit
 from launch.substitutions import LaunchConfiguration, Command
 from launch_ros.actions import Node
@@ -43,6 +44,8 @@ def generate_launch_description():
     # =========================================================
 
     use_sim_time = LaunchConfiguration('use_sim_time')
+    wheelbase = LaunchConfiguration('wheelbase')
+    gui = LaunchConfiguration('gui')
 
     # =========================================================
     # PACKAGE PATHS
@@ -152,29 +155,37 @@ def generate_launch_description():
     robot_description = ParameterValue(
         Command([
             'xacro ',
-            xacro_file
+            xacro_file,
+            ' wheelbase:=',
+            wheelbase,
         ]),
         value_type=str
     )
 
     # =========================================================
-    # GAZEBO (server + client trong 1 process)
-    #
-    # Dùng đúng cách đã test tay thành công: chạy binary `gazebo`
-    # trực tiếp thay vì tách gzserver/gzclient qua ROS wrapper.
-    #
-    # Thêm 2 plugin ROS để spawn_entity.py vẫn gọi được /spawn_entity.
+    # Keep Gazebo physics and ROS services in gzserver; launch its GUI only
+    # when explicitly requested.
     # =========================================================
 
     gazebo_process = ExecuteProcess(
         cmd=[
-            'gazebo',
+            'gzserver',
             '--verbose',
             warehouse_world,
             '-s', 'libgazebo_ros_init.so',
             '-s', 'libgazebo_ros_factory.so',
         ],
         output='screen',
+        additional_env={
+            'GAZEBO_MODEL_PATH': gazebo_model_path_value,
+            'GAZEBO_RESOURCE_PATH': gazebo_resource_path_value,
+        }
+    )
+
+    gazebo_gui_process = ExecuteProcess(
+        cmd=['gzclient'],
+        output='screen',
+        condition=IfCondition(gui),
         additional_env={
             'GAZEBO_MODEL_PATH': gazebo_model_path_value,
             'GAZEBO_RESOURCE_PATH': gazebo_resource_path_value,
@@ -273,11 +284,22 @@ def generate_launch_description():
             default_value='true',
             description='Use simulation time'
         ),
+        DeclareLaunchArgument(
+            'wheelbase',
+            default_value='0.3187',
+            description='Wheelbase in meters, passed to the robot Xacro',
+        ),
+        DeclareLaunchArgument(
+            'gui',
+            default_value='false',
+            description='Launch the Gazebo GUI client',
+        ),
 
         gazebo_model_path,
         gazebo_resource_path,
 
         gazebo_process,
+        gazebo_gui_process,
 
         robot_state_publisher,
 

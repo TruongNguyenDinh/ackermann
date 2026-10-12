@@ -17,6 +17,16 @@ def generate_launch_description():
         'config',
         'nav2_params.yaml'
     )
+    navigate_to_pose_tree = os.path.join(
+        navigation_pkg,
+        'behavior_trees',
+        'navigate_to_pose_ackermann.xml'
+    )
+    navigate_through_poses_tree = os.path.join(
+        navigation_pkg,
+        'behavior_trees',
+        'navigate_through_poses_ackermann.xml'
+    )
 
     params_file = LaunchConfiguration('params_file')
     use_sim_time = LaunchConfiguration('use_sim_time')
@@ -61,7 +71,13 @@ def generate_launch_description():
         executable='bt_navigator',
         name='bt_navigator',
         output='screen',
-        parameters=[params_file]
+        parameters=[
+            params_file,
+            {
+                'default_nav_to_pose_bt_xml': navigate_to_pose_tree,
+                'default_nav_through_poses_bt_xml': navigate_through_poses_tree,
+            },
+        ]
     )
 
     waypoint_follower_node = Node(
@@ -112,7 +128,6 @@ def generate_launch_description():
             default_value='true',
             description='Use simulation time'
         ),
-
         controller_server_node,
         planner_server_node,
         behavior_server_node,

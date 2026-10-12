@@ -1,0 +1,3 @@
+[console_scripts]
+ackerman_kinematic = ackermann_kinematics_py.ackermann:main
+

@@ -1,0 +1,780 @@
+[0.000000] (-) TimerEvent: {}
+[0.000053] (-) JobUnselected: {'identifier': 'ackermann_kinematics'}
+[0.000072] (-) JobUnselected: {'identifier': 'ackermann_msg'}
+[0.000086] (ackermann_description) JobQueued: {'identifier': 'ackermann_description', 'dependencies': OrderedDict()}
+[0.000099] (ackermann_kinematics_py) JobQueued: {'identifier': 'ackermann_kinematics_py', 'dependencies': OrderedDict()}
+[0.000111] (ackermann_odometry) JobQueued: {'identifier': 'ackermann_odometry', 'dependencies': OrderedDict()}
+[0.000121] (aws_robomaker_small_warehouse_world) JobQueued: {'identifier': 'aws_robomaker_small_warehouse_world', 'dependencies': OrderedDict()}
+[0.000131] (ackermann_navigation) JobQueued: {'identifier': 'ackermann_navigation', 'dependencies': OrderedDict([('ackermann_description', '/home/ndtruong/workspace/install/ackermann_description'), ('ackermann_kinematics_py', '/home/ndtruong/workspace/install/ackermann_kinematics_py'), ('ackermann_odometry', '/home/ndtruong/workspace/install/ackermann_odometry'), ('aws_robomaker_small_warehouse_world', '/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world')])}
+[0.000534] (ackermann_description) JobStarted: {'identifier': 'ackermann_description'}
+[0.006992] (ackermann_kinematics_py) JobStarted: {'identifier': 'ackermann_kinematics_py'}
+[0.011636] (ackermann_odometry) JobStarted: {'identifier': 'ackermann_odometry'}
+[0.015786] (aws_robomaker_small_warehouse_world) JobStarted: {'identifier': 'aws_robomaker_small_warehouse_world'}
+[0.020229] (ackermann_description) JobProgress: {'identifier': 'ackermann_description', 'progress': 'cmake'}
+[0.020587] (ackermann_description) Command: {'cmd': ['/usr/bin/cmake', '/home/ndtruong/workspace/ackermann_description', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/ndtruong/workspace/install/ackermann_description'], 'cwd': '/home/ndtruong/workspace/build/ackermann_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ORCA_WORKSPACE_ID', '1165347e-1649-41a7-8225-69c5694ee873::/home/ndtruong/workspace'), ('CODEX_CI', '1'), ('ORCA_CLI_BIN_DIR', '/home/ndtruong/.config/orca/linux-orca-cli-shim'), ('USER', 'ndtruong'), ('LC_TIME', 'vi_VN'), ('ORCA_AGENT_HOOK_ENDPOINT', '/home/ndtruong/.config/orca/agent-hooks/endpoint.env'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ndtruong'), ('JCODE_RUNTIME_DIR', '/tmp/orca-jcode/70c680628ec3d0c9'), ('CHROME_DESKTOP', 'orca.desktop'), ('ORCA_OMP_FRESH_CONFIG', '/home/ndtruong/.config/orca/omp-managed-status-extension/fresh-session.yml'), ('TERM_PROGRAM_VERSION', '1.4.224'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/ndtruong/.nvm/versions/node/v22.23.2/bin'), ('NVM_INC', '/home/ndtruong/.nvm/versions/node/v22.23.2/include/node'), ('ORCA_AGENT_HOOK_OPENCODE_TUI', '1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'vi_VN'), ('ORCA_PANE_KEY', '416f2f94-daab-4cda-af35-63c4fdb12070:5777ffdf-5f44-42f6-b889-fd40d44818a4'), ('ORCA_TERMINAL_HANDLE', 'term_3e53ffee-1426-4ee6-a8d6-1280759462a6'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2633'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=58a18647015f40124b9ac12b6acaece8'), ('COLORTERM', 'truecolor'), ('POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD', 'true'), ('ORCA_OPENCODE_AGENT', 'opencode'), ('ORCA_AGENT_HOOK_TOKEN', 'cc6fe3b0-336c-44fc-94b6-bdf566db9134'), ('NVM_DIR', '/home/ndtruong/.nvm'), ('FORCE_HYPERLINK', '1'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ORCA_USER_DATA_PATH', '/home/ndtruong/.config/orca'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ndtruong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('ORCA_AGENT_HOOK_ENV', 'production'), ('CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS', '1'), ('USERNAME', 'ndtruong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ORCA_WORKTREE_ID', '1165347e-1649-41a7-8225-69c5694ee873::/home/ndtruong/workspace'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/ndtruong/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/ndtruong/.local/bin:/home/ndtruong/.codex/tmp/arg0/codex-arg0Jns0kC:/home/ndtruong/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/ndtruong/.config/orca/linux-orca-cli-shim:/home/ndtruong/.local/bin:/home/ndtruong/.local/bin:/home/ndtruong/.config/orca/linux-orca-cli-shim:/home/ndtruong/.local/bin:/home/ndtruong/.nvm/versions/node/v22.23.2/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ndtruong/.volta/bin:/home/ndtruong/.asdf/shims:/home/ndtruong/.fnm/aliases/default/bin:/home/ndtruong/.local/share/mise/shims:/home/ndtruong/.local/share/pnpm:/home/ndtruong/.yarn/bin:/home/ndtruong/.bun/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/home/linuxbrew/.linuxbrew/bin:/nix/var/nix/profiles/default/bin:/home/ndtruong/bin:/home/ndtruong/.nix-profile/bin:/home/ndtruong/.opencode/bin:/home/ndtruong/.vite-plus/bin'), ('SESSION_MANAGER', 'local/javis24:@/tmp/.ICE-unix/2633,unix/javis24:/tmp/.ICE-unix/2633'), ('CODEX_VERSION', '0.162.1'), ('CODEX_SESSION_ID', '01a128b9-14be-7b72-bee4-c1a566317168'), ('INVOCATION_ID', '372b026d96d84bf683befb23a0a45e4b'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('ORCA_AGENT_HOOK_VERSION', '1'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0d09499e_3025_4b09_8501_90282c04e62e'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.137'), ('TERM_PROGRAM', 'Orca'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/tmp/.mount_orca-lpCIFfI/usr/share/glib-2.0/schemas'), ('ORCA_OMP_STATUS_EXTENSION', '/home/ndtruong/.config/orca/omp-managed-status-extension/orca-agent-status.ts'), ('ORCA_APP_VERSION', '1.4.224'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('ORCA_AGENT_PANE', '416f2f94-daab-4cda-af35-63c4fdb12070:5777ffdf-5f44-42f6-b889-fd40d44818a4'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ORCA_HISTFILE', '/home/ndtruong/.config/orca/terminal-history/e11250f5952689b5/bash_history'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a128b9-14be-7b72-bee4-c1a566317168'), ('LC_MEASUREMENT', 'vi_VN'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'vi_VN'), ('ORCA_AGENT_HOOK_PORT', '43651'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ndtruong/workspace/build/ackermann_description'), ('ORCA_AGENT_HOOK_TRANSPORT', 'raw-json-v1'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=58a18647015f40124b9ac12b6acaece8'), ('XDG_DATA_DIRS', '/tmp/.mount_orca-lpCIFfI/usr/share/:/usr/share/ubuntu:/usr/share/gnome:/home/ndtruong/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/usr/share/gnome:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('HISTFILE', '/home/ndtruong/.config/orca/terminal-history/e11250f5952689b5/bash_history'), ('ORCA_TAB_ID', '416f2f94-daab-4cda-af35-63c4fdb12070'), ('COLCON', '1'), ('ORCA_IMAGE_PROTOCOL', 'kitty'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099834] (-) TimerEvent: {}
+[0.200000] (-) TimerEvent: {}
+[0.300191] (-) TimerEvent: {}
+[0.400384] (-) TimerEvent: {}
+[0.500567] (-) TimerEvent: {}
+[0.523877] (aws_robomaker_small_warehouse_world) JobProgress: {'identifier': 'aws_robomaker_small_warehouse_world', 'progress': 'cmake'}
+[0.524461] (aws_robomaker_small_warehouse_world) Command: {'cmd': ['/usr/bin/cmake', '/home/ndtruong/workspace/small-warehouse-world', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/ndtruong/workspace/install/aws_robomaker_small_warehouse_world'], 'cwd': '/home/ndtruong/workspace/build/aws_robomaker_small_warehouse_world', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ORCA_WORKSPACE_ID', '1165347e-1649-41a7-8225-69c5694ee873::/home/ndtruong/workspace'), ('CODEX_CI', '1'), ('ORCA_CLI_BIN_DIR', '/home/ndtruong/.config/orca/linux-orca-cli-shim'), ('USER', 'ndtruong'), ('LC_TIME', 'vi_VN'), ('ORCA_AGENT_HOOK_ENDPOINT', '/home/ndtruong/.config/orca/agent-hooks/endpoint.env'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ndtruong'), ('JCODE_RUNTIME_DIR', '/tmp/orca-jcode/70c680628ec3d0c9'), ('CHROME_DESKTOP', 'orca.desktop'), ('ORCA_OMP_FRESH_CONFIG', '/home/ndtruong/.config/orca/omp-managed-status-extension/fresh-session.yml'), ('TERM_PROGRAM_VERSION', '1.4.224'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/ndtruong/.nvm/versions/node/v22.23.2/bin'), ('NVM_INC', '/home/ndtruong/.nvm/versions/node/v22.23.2/include/node'), ('ORCA_AGENT_HOOK_OPENCODE_TUI', '1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'vi_VN'), ('ORCA_PANE_KEY', '416f2f94-daab-4cda-af35-63c4fdb12070:5777ffdf-5f44-42f6-b889-fd40d44818a4'), ('ORCA_TERMINAL_HANDLE', 'term_3e53ffee-1426-4ee6-a8d6-1280759462a6'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2633'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=58a18647015f40124b9ac12b6acaece8'), ('COLORTERM', 'truecolor'), ('POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD', 'true'), ('ORCA_OPENCODE_AGENT', 'opencode'), ('ORCA_AGENT_HOOK_TOKEN', 'cc6fe3b0-336c-44fc-94b6-bdf566db9134'), ('NVM_DIR', '/home/ndtruong/.nvm'), ('FORCE_HYPERLINK', '1'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ORCA_USER_DATA_PATH', '/home/ndtruong/.config/orca'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ndtruong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('ORCA_AGENT_HOOK_ENV', 'production'), ('CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS', '1'), ('USERNAME', 'ndtruong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ORCA_WORKTREE_ID', '1165347e-1649-41a7-8225-69c5694ee873::/home/ndtruong/workspace'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/ndtruong/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/ndtruong/.local/bin:/home/ndtruong/.codex/tmp/arg0/codex-arg0Jns0kC:/home/ndtruong/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/ndtruong/.config/orca/linux-orca-cli-shim:/home/ndtruong/.local/bin:/home/ndtruong/.local/bin:/home/ndtruong/.config/orca/linux-orca-cli-shim:/home/ndtruong/.local/bin:/home/ndtruong/.nvm/versions/node/v22.23.2/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ndtruong/.volta/bin:/home/ndtruong/.asdf/shims:/home/ndtruong/.fnm/aliases/default/bin:/home/ndtruong/.local/share/mise/shims:/home/ndtruong/.local/share/pnpm:/home/ndtruong/.yarn/bin:/home/ndtruong/.bun/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/home/linuxbrew/.linuxbrew/bin:/nix/var/nix/profiles/default/bin:/home/ndtruong/bin:/home/ndtruong/.nix-profile/bin:/home/ndtruong/.opencode/bin:/home/ndtruong/.vite-plus/bin'), ('SESSION_MANAGER', 'local/javis24:@/tmp/.ICE-unix/2633,unix/javis24:/tmp/.ICE-unix/2633'), ('CODEX_VERSION', '0.162.1'), ('CODEX_SESSION_ID', '01a128b9-14be-7b72-bee4-c1a566317168'), ('INVOCATION_ID', '372b026d96d84bf683befb23a0a45e4b'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('ORCA_AGENT_HOOK_VERSION', '1'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0d09499e_3025_4b09_8501_90282c04e62e'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.137'), ('TERM_PROGRAM', 'Orca'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/tmp/.mount_orca-lpCIFfI/usr/share/glib-2.0/schemas'), ('ORCA_OMP_STATUS_EXTENSION', '/home/ndtruong/.config/orca/omp-managed-status-extension/orca-agent-status.ts'), ('ORCA_APP_VERSION', '1.4.224'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('ORCA_AGENT_PANE', '416f2f94-daab-4cda-af35-63c4fdb12070:5777ffdf-5f44-42f6-b889-fd40d44818a4'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ORCA_HISTFILE', '/home/ndtruong/.config/orca/terminal-history/e11250f5952689b5/bash_history'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a128b9-14be-7b72-bee4-c1a566317168'), ('LC_MEASUREMENT', 'vi_VN'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'vi_VN'), ('ORCA_AGENT_HOOK_PORT', '43651'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ndtruong/workspace/build/aws_robomaker_small_warehouse_world'), ('ORCA_AGENT_HOOK_TRANSPORT', 'raw-json-v1'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=58a18647015f40124b9ac12b6acaece8'), ('XDG_DATA_DIRS', '/tmp/.mount_orca-lpCIFfI/usr/share/:/usr/share/ubuntu:/usr/share/gnome:/home/ndtruong/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/usr/share/gnome:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('HISTFILE', '/home/ndtruong/.config/orca/terminal-history/e11250f5952689b5/bash_history'), ('ORCA_TAB_ID', '416f2f94-daab-4cda-af35-63c4fdb12070'), ('COLCON', '1'), ('ORCA_IMAGE_PROTOCOL', 'kitty'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.526685] (ackermann_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.527238] (ackermann_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.527327] (ackermann_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.527398] (ackermann_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.527526] (ackermann_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.527599] (ackermann_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.527659] (ackermann_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.527723] (ackermann_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.527793] (ackermann_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.527868] (ackermann_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.527949] (ackermann_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.528027] (ackermann_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.528103] (ackermann_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.602513] (-) TimerEvent: {}
+[0.606694] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.697809] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.702607] (-) TimerEvent: {}
+[0.709239] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.736801] (ackermann_description) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.802718] (-) TimerEvent: {}
+[0.834314] (ackermann_description) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.838298] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.852630] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.853491] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.856790] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.860355] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.895698] (ackermann_description) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.903533] (-) TimerEvent: {}
+[0.972715] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.985096] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.988900] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.989132] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.991132] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.003664] (-) TimerEvent: {}
+[1.033129] (ackermann_description) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.034939] (ackermann_description) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.036617] (ackermann_description) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.040344] (ackermann_description) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.043813] (ackermann_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.047102] (ackermann_description) StdoutLine: {'line': b'-- Generating done\n'}
+[1.053316] (ackermann_description) StdoutLine: {'line': b'-- Build files have been written to: /home/ndtruong/workspace/build/ackermann_description\n'}
+[1.106479] (-) TimerEvent: {}
+[1.208687] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.208882] (-) TimerEvent: {}
+[1.208911] (ackermann_description) CommandEnded: {'returncode': 0}
+[1.209465] (ackermann_description) JobProgress: {'identifier': 'ackermann_description', 'progress': 'build'}
+[1.209501] (ackermann_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ndtruong/workspace/build/ackermann_description', '--', '-j8', '-l8'], 'cwd': '/home/ndtruong/workspace/build/ackermann_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ORCA_WORKSPACE_ID', '1165347e-1649-41a7-8225-69c5694ee873::/home/ndtruong/workspace'), ('CODEX_CI', '1'), ('ORCA_CLI_BIN_DIR', '/home/ndtruong/.config/orca/linux-orca-cli-shim'), ('USER', 'ndtruong'), ('LC_TIME', 'vi_VN'), ('ORCA_AGENT_HOOK_ENDPOINT', '/home/ndtruong/.config/orca/agent-hooks/endpoint.env'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ndtruong'), ('JCODE_RUNTIME_DIR', '/tmp/orca-jcode/70c680628ec3d0c9'), ('CHROME_DESKTOP', 'orca.desktop'), ('ORCA_OMP_FRESH_CONFIG', '/home/ndtruong/.config/orca/omp-managed-status-extension/fresh-session.yml'), ('TERM_PROGRAM_VERSION', '1.4.224'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/ndtruong/.nvm/versions/node/v22.23.2/bin'), ('NVM_INC', '/home/ndtruong/.nvm/versions/node/v22.23.2/include/node'), ('ORCA_AGENT_HOOK_OPENCODE_TUI', '1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'vi_VN'), ('ORCA_PANE_KEY', '416f2f94-daab-4cda-af35-63c4fdb12070:5777ffdf-5f44-42f6-b889-fd40d44818a4'), ('ORCA_TERMINAL_HANDLE', 'term_3e53ffee-1426-4ee6-a8d6-1280759462a6'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2633'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=58a18647015f40124b9ac12b6acaece8'), ('COLORTERM', 'truecolor'), ('POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD', 'true'), ('ORCA_OPENCODE_AGENT', 'opencode'), ('ORCA_AGENT_HOOK_TOKEN', 'cc6fe3b0-336c-44fc-94b6-bdf566db9134'), ('NVM_DIR', '/home/ndtruong/.nvm'), ('FORCE_HYPERLINK', '1'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ORCA_USER_DATA_PATH', '/home/ndtruong/.config/orca'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ndtruong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('ORCA_AGENT_HOOK_ENV', 'production'), ('CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS', '1'), ('USERNAME', 'ndtruong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ORCA_WORKTREE_ID', '1165347e-1649-41a7-8225-69c5694ee873::/home/ndtruong/workspace'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/ndtruong/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/ndtruong/.local/bin:/home/ndtruong/.codex/tmp/arg0/codex-arg0Jns0kC:/home/ndtruong/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/ndtruong/.config/orca/linux-orca-cli-shim:/home/ndtruong/.local/bin:/home/ndtruong/.local/bin:/home/ndtruong/.config/orca/linux-orca-cli-shim:/home/ndtruong/.local/bin:/home/ndtruong/.nvm/versions/node/v22.23.2/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ndtruong/.volta/bin:/home/ndtruong/.asdf/shims:/home/ndtruong/.fnm/aliases/default/bin:/home/ndtruong/.local/share/mise/shims:/home/ndtruong/.local/share/pnpm:/home/ndtruong/.yarn/bin:/home/ndtruong/.bun/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/home/linuxbrew/.linuxbrew/bin:/nix/var/nix/profiles/default/bin:/home/ndtruong/bin:/home/ndtruong/.nix-profile/bin:/home/ndtruong/.opencode/bin:/home/ndtruong/.vite-plus/bin'), ('SESSION_MANAGER', 'local/javis24:@/tmp/.ICE-unix/2633,unix/javis24:/tmp/.ICE-unix/2633'), ('CODEX_VERSION', '0.162.1'), ('CODEX_SESSION_ID', '01a128b9-14be-7b72-bee4-c1a566317168'), ('INVOCATION_ID', '372b026d96d84bf683befb23a0a45e4b'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('ORCA_AGENT_HOOK_VERSION', '1'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0d09499e_3025_4b09_8501_90282c04e62e'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.137'), ('TERM_PROGRAM', 'Orca'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/tmp/.mount_orca-lpCIFfI/usr/share/glib-2.0/schemas'), ('ORCA_OMP_STATUS_EXTENSION', '/home/ndtruong/.config/orca/omp-managed-status-extension/orca-agent-status.ts'), ('ORCA_APP_VERSION', '1.4.224'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('ORCA_AGENT_PANE', '416f2f94-daab-4cda-af35-63c4fdb12070:5777ffdf-5f44-42f6-b889-fd40d44818a4'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ORCA_HISTFILE', '/home/ndtruong/.config/orca/terminal-history/e11250f5952689b5/bash_history'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a128b9-14be-7b72-bee4-c1a566317168'), ('LC_MEASUREMENT', 'vi_VN'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'vi_VN'), ('ORCA_AGENT_HOOK_PORT', '43651'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ndtruong/workspace/build/ackermann_description'), ('ORCA_AGENT_HOOK_TRANSPORT', 'raw-json-v1'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=58a18647015f40124b9ac12b6acaece8'), ('XDG_DATA_DIRS', '/tmp/.mount_orca-lpCIFfI/usr/share/:/usr/share/ubuntu:/usr/share/gnome:/home/ndtruong/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/usr/share/gnome:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('HISTFILE', '/home/ndtruong/.config/orca/terminal-history/e11250f5952689b5/bash_history'), ('ORCA_TAB_ID', '416f2f94-daab-4cda-af35-63c4fdb12070'), ('COLCON', '1'), ('ORCA_IMAGE_PROTOCOL', 'kitty'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.309487] (-) TimerEvent: {}
+[1.353679] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.353895] (ackermann_description) CommandEnded: {'returncode': 0}
+[1.354510] (ackermann_description) JobProgress: {'identifier': 'ackermann_description', 'progress': 'install'}
+[1.368762] (ackermann_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ndtruong/workspace/build/ackermann_description'], 'cwd': '/home/ndtruong/workspace/build/ackermann_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ORCA_WORKSPACE_ID', '1165347e-1649-41a7-8225-69c5694ee873::/home/ndtruong/workspace'), ('CODEX_CI', '1'), ('ORCA_CLI_BIN_DIR', '/home/ndtruong/.config/orca/linux-orca-cli-shim'), ('USER', 'ndtruong'), ('LC_TIME', 'vi_VN'), ('ORCA_AGENT_HOOK_ENDPOINT', '/home/ndtruong/.config/orca/agent-hooks/endpoint.env'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ndtruong'), ('JCODE_RUNTIME_DIR', '/tmp/orca-jcode/70c680628ec3d0c9'), ('CHROME_DESKTOP', 'orca.desktop'), ('ORCA_OMP_FRESH_CONFIG', '/home/ndtruong/.config/orca/omp-managed-status-extension/fresh-session.yml'), ('TERM_PROGRAM_VERSION', '1.4.224'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/ndtruong/.nvm/versions/node/v22.23.2/bin'), ('NVM_INC', '/home/ndtruong/.nvm/versions/node/v22.23.2/include/node'), ('ORCA_AGENT_HOOK_OPENCODE_TUI', '1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'vi_VN'), ('ORCA_PANE_KEY', '416f2f94-daab-4cda-af35-63c4fdb12070:5777ffdf-5f44-42f6-b889-fd40d44818a4'), ('ORCA_TERMINAL_HANDLE', 'term_3e53ffee-1426-4ee6-a8d6-1280759462a6'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2633'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=58a18647015f40124b9ac12b6acaece8'), ('COLORTERM', 'truecolor'), ('POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD', 'true'), ('ORCA_OPENCODE_AGENT', 'opencode'), ('ORCA_AGENT_HOOK_TOKEN', 'cc6fe3b0-336c-44fc-94b6-bdf566db9134'), ('NVM_DIR', '/home/ndtruong/.nvm'), ('FORCE_HYPERLINK', '1'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ORCA_USER_DATA_PATH', '/home/ndtruong/.config/orca'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ndtruong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('ORCA_AGENT_HOOK_ENV', 'production'), ('CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS', '1'), ('USERNAME', 'ndtruong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ORCA_WORKTREE_ID', '1165347e-1649-41a7-8225-69c5694ee873::/home/ndtruong/workspace'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/ndtruong/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/ndtruong/.local/bin:/home/ndtruong/.codex/tmp/arg0/codex-arg0Jns0kC:/home/ndtruong/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/ndtruong/.config/orca/linux-orca-cli-shim:/home/ndtruong/.local/bin:/home/ndtruong/.local/bin:/home/ndtruong/.config/orca/linux-orca-cli-shim:/home/ndtruong/.local/bin:/home/ndtruong/.nvm/versions/node/v22.23.2/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ndtruong/.volta/bin:/home/ndtruong/.asdf/shims:/home/ndtruong/.fnm/aliases/default/bin:/home/ndtruong/.local/share/mise/shims:/home/ndtruong/.local/share/pnpm:/home/ndtruong/.yarn/bin:/home/ndtruong/.bun/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/home/linuxbrew/.linuxbrew/bin:/nix/var/nix/profiles/default/bin:/home/ndtruong/bin:/home/ndtruong/.nix-profile/bin:/home/ndtruong/.opencode/bin:/home/ndtruong/.vite-plus/bin'), ('SESSION_MANAGER', 'local/javis24:@/tmp/.ICE-unix/2633,unix/javis24:/tmp/.ICE-unix/2633'), ('CODEX_VERSION', '0.162.1'), ('CODEX_SESSION_ID', '01a128b9-14be-7b72-bee4-c1a566317168'), ('INVOCATION_ID', '372b026d96d84bf683befb23a0a45e4b'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('ORCA_AGENT_HOOK_VERSION', '1'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0d09499e_3025_4b09_8501_90282c04e62e'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.137'), ('TERM_PROGRAM', 'Orca'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/tmp/.mount_orca-lpCIFfI/usr/share/glib-2.0/schemas'), ('ORCA_OMP_STATUS_EXTENSION', '/home/ndtruong/.config/orca/omp-managed-status-extension/orca-agent-status.ts'), ('ORCA_APP_VERSION', '1.4.224'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('ORCA_AGENT_PANE', '416f2f94-daab-4cda-af35-63c4fdb12070:5777ffdf-5f44-42f6-b889-fd40d44818a4'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ORCA_HISTFILE', '/home/ndtruong/.config/orca/terminal-history/e11250f5952689b5/bash_history'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a128b9-14be-7b72-bee4-c1a566317168'), ('LC_MEASUREMENT', 'vi_VN'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'vi_VN'), ('ORCA_AGENT_HOOK_PORT', '43651'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ndtruong/workspace/build/ackermann_description'), ('ORCA_AGENT_HOOK_TRANSPORT', 'raw-json-v1'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=58a18647015f40124b9ac12b6acaece8'), ('XDG_DATA_DIRS', '/tmp/.mount_orca-lpCIFfI/usr/share/:/usr/share/ubuntu:/usr/share/gnome:/home/ndtruong/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/usr/share/gnome:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('HISTFILE', '/home/ndtruong/.config/orca/terminal-history/e11250f5952689b5/bash_history'), ('ORCA_TAB_ID', '416f2f94-daab-4cda-af35-63c4fdb12070'), ('COLCON', '1'), ('ORCA_IMAGE_PROTOCOL', 'kitty'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.378800] (ackermann_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.379362] (ackermann_description) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.381317] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/launch/model.launch.py\n'}
+[1.397322] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/ackermann.urdf.xacro\n'}
+[1.409645] (ackermann_odometry) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/ndtruong/workspace/build/ackermann_odometry/build', '--no-deps', 'symlink_data'], 'cwd': '/home/ndtruong/workspace/build/ackermann_odometry', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('ORCA_WORKSPACE_ID', '1165347e-1649-41a7-8225-69c5694ee873::/home/ndtruong/workspace'), ('CODEX_CI', '1'), ('ORCA_CLI_BIN_DIR', '/home/ndtruong/.config/orca/linux-orca-cli-shim'), ('USER', 'ndtruong'), ('LC_TIME', 'vi_VN'), ('ORCA_AGENT_HOOK_ENDPOINT', '/home/ndtruong/.config/orca/agent-hooks/endpoint.env'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ndtruong'), ('JCODE_RUNTIME_DIR', '/tmp/orca-jcode/70c680628ec3d0c9'), ('CHROME_DESKTOP', 'orca.desktop'), ('ORCA_OMP_FRESH_CONFIG', '/home/ndtruong/.config/orca/omp-managed-status-extension/fresh-session.yml'), ('TERM_PROGRAM_VERSION', '1.4.224'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/ndtruong/.nvm/versions/node/v22.23.2/bin'), ('NVM_INC', '/home/ndtruong/.nvm/versions/node/v22.23.2/include/node'), ('ORCA_AGENT_HOOK_OPENCODE_TUI', '1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'vi_VN'), ('ORCA_PANE_KEY', '416f2f94-daab-4cda-af35-63c4fdb12070:5777ffdf-5f44-42f6-b889-fd40d44818a4'), ('ORCA_TERMINAL_HANDLE', 'term_3e53ffee-1426-4ee6-a8d6-1280759462a6'), ('LC_CTYPE', 'C.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2633'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=58a18647015f40124b9ac12b6acaece8'), ('COLORTERM', 'truecolor'), ('POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD', 'true'), ('ORCA_OPENCODE_AGENT', 'opencode'), ('ORCA_AGENT_HOOK_TOKEN', 'cc6fe3b0-336c-44fc-94b6-bdf566db9134'), ('NVM_DIR', '/home/ndtruong/.nvm'), ('FORCE_HYPERLINK', '1'), ('CODEX_PERMISSION_PROFILE', ':workspace'), ('ORCA_USER_DATA_PATH', '/home/ndtruong/.config/orca'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ndtruong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('ORCA_AGENT_HOOK_ENV', 'production'), ('CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS', '1'), ('USERNAME', 'ndtruong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ORCA_WORKTREE_ID', '1165347e-1649-41a7-8225-69c5694ee873::/home/ndtruong/workspace'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/ndtruong/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/ndtruong/.local/bin:/home/ndtruong/.codex/tmp/arg0/codex-arg0Jns0kC:/home/ndtruong/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:/home/ndtruong/.config/orca/linux-orca-cli-shim:/home/ndtruong/.local/bin:/home/ndtruong/.local/bin:/home/ndtruong/.config/orca/linux-orca-cli-shim:/home/ndtruong/.local/bin:/home/ndtruong/.nvm/versions/node/v22.23.2/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ndtruong/.volta/bin:/home/ndtruong/.asdf/shims:/home/ndtruong/.fnm/aliases/default/bin:/home/ndtruong/.local/share/mise/shims:/home/ndtruong/.local/share/pnpm:/home/ndtruong/.yarn/bin:/home/ndtruong/.bun/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/home/linuxbrew/.linuxbrew/bin:/nix/var/nix/profiles/default/bin:/home/ndtruong/bin:/home/ndtruong/.nix-profile/bin:/home/ndtruong/.opencode/bin:/home/ndtruong/.vite-plus/bin'), ('SESSION_MANAGER', 'local/javis24:@/tmp/.ICE-unix/2633,unix/javis24:/tmp/.ICE-unix/2633'), ('CODEX_VERSION', '0.162.1'), ('CODEX_SESSION_ID', '01a128b9-14be-7b72-bee4-c1a566317168'), ('INVOCATION_ID', '372b026d96d84bf683befb23a0a45e4b'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('ORCA_AGENT_HOOK_VERSION', '1'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0d09499e_3025_4b09_8501_90282c04e62e'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.137'), ('TERM_PROGRAM', 'Orca'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/tmp/.mount_orca-lpCIFfI/usr/share/glib-2.0/schemas'), ('ORCA_OMP_STATUS_EXTENSION', '/home/ndtruong/.config/orca/omp-managed-status-extension/orca-agent-status.ts'), ('ORCA_APP_VERSION', '1.4.224'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('ORCA_AGENT_PANE', '416f2f94-daab-4cda-af35-63c4fdb12070:5777ffdf-5f44-42f6-b889-fd40d44818a4'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ORCA_HISTFILE', '/home/ndtruong/.config/orca/terminal-history/e11250f5952689b5/bash_history'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '01a128b9-14be-7b72-bee4-c1a566317168'), ('LC_MEASUREMENT', 'vi_VN'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'vi_VN'), ('ORCA_AGENT_HOOK_PORT', '43651'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ndtruong/workspace/build/ackermann_odometry'), ('ORCA_AGENT_HOOK_TRANSPORT', 'raw-json-v1'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=58a18647015f40124b9ac12b6acaece8'), ('XDG_DATA_DIRS', '/tmp/.mount_orca-lpCIFfI/usr/share/:/usr/share/ubuntu:/usr/share/gnome:/home/ndtruong/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop:/usr/share/gnome:/usr/local/share/:/usr/share/'), ('PYTHONPATH', '/home/ndtruong/workspace/build/ackermann_odometry/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('HISTFILE', '/home/ndtruong/.config/orca/terminal-history/e11250f5952689b5/bash_history'), ('ORCA_TAB_ID', '416f2f94-daab-4cda-af35-63c4fdb12070'), ('COLCON', '1'), ('ORCA_IMAGE_PROTOCOL', 'kitty'), ('VTE_VERSION', '6800')]), 'shell': False}
+[1.410582] (-) TimerEvent: {}
+[1.412293] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/core_macro.xacro\n'}
+[1.423499] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/gazebo_control.xacro\n'}
+[1.425167] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'CMake Error at CMakeLists.txt:11 (find_package):\n'}
+[1.425392] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  By not providing "Findgazebo_ros.cmake" in CMAKE_MODULE_PATH this project\n'}
+[1.425496] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[1.425564] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  "gazebo_ros", but CMake did not find one.\n'}
+[1.425634] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'\n'}
+[1.425698] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  Could not find a package configuration file provided by "gazebo_ros" with\n'}
+[1.425769] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  any of the following names:\n'}
+[1.425829] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'\n'}
+[1.425885] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'    gazebo_rosConfig.cmake\n'}
+[1.425942] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'    gazebo_ros-config.cmake\n'}
+[1.426000] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'\n'}
+[1.426058] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  Add the installation prefix of "gazebo_ros" to CMAKE_PREFIX_PATH or set\n'}
+[1.426117] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  "gazebo_ros_DIR" to a directory containing one of the above files.  If\n'}
+[1.426178] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  "gazebo_ros" provides a separate development package or SDK, be sure it has\n'}
+[1.426241] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  been installed.\n'}
+[1.426305] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'\n'}
+[1.427663] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'\n'}
+[1.428029] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.428114] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'See also "/home/ndtruong/workspace/build/aws_robomaker_small_warehouse_world/CMakeFiles/CMakeOutput.log".\n'}
+[1.433502] (aws_robomaker_small_warehouse_world) CommandEnded: {'returncode': 1}
+[1.436666] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/inertial_macros.xacro\n'}
+[1.466774] (aws_robomaker_small_warehouse_world) JobEnded: {'identifier': 'aws_robomaker_small_warehouse_world', 'rc': 1}
+[1.467857] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/laser.xacro\n'}
+[1.467996] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/materials.xacro\n'}
+[1.468073] (ackermann_kinematics_py) JobEnded: {'identifier': 'ackermann_kinematics_py', 'rc': 'SIGINT'}
+[1.470052] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/urdf/wheels.xacro\n'}
+[1.478295] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/rviz2/rviz.rviz\n'}
+[1.487008] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/config/controller.yaml\n'}
+[1.496064] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ament_index/resource_index/package_run_dependencies/ackermann_description\n'}
+[1.504563] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ament_index/resource_index/parent_prefix_path/ackermann_description\n'}
+[1.510704] (-) TimerEvent: {}
+[1.515685] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/environment/ament_prefix_path.sh\n'}
+[1.524481] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/environment/ament_prefix_path.dsv\n'}
+[1.532837] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/environment/path.sh\n'}
+[1.540831] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/environment/path.dsv\n'}
+[1.551230] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/local_setup.bash\n'}
+[1.558549] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/local_setup.sh\n'}
+[1.566002] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/local_setup.zsh\n'}
+[1.573395] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/local_setup.dsv\n'}
+[1.582234] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/package.dsv\n'}
+[1.591756] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ament_index/resource_index/packages/ackermann_description\n'}
+[1.600205] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/cmake/ackermann_descriptionConfig.cmake\n'}
+[1.608035] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/cmake/ackermann_descriptionConfig-version.cmake\n'}
+[1.610800] (-) TimerEvent: {}
+[1.615967] (ackermann_description) StdoutLine: {'line': b'-- Symlinking: /home/ndtruong/workspace/install/ackermann_description/share/ackermann_description/package.xml\n'}
+[1.624767] (ackermann_description) JobEnded: {'identifier': 'ackermann_description', 'rc': 'SIGINT'}
+[1.681101] (ackermann_odometry) StdoutLine: {'line': b'running develop\n'}
+[1.710910] (-) TimerEvent: {}
+[1.811112] (-) TimerEvent: {}
+[1.872290] (ackermann_odometry) StdoutLine: {'line': b'running egg_info\n'}
+[1.872627] (ackermann_odometry) StdoutLine: {'line': b'creating ackermann_odometry.egg-info\n'}
+[1.872840] (ackermann_odometry) StdoutLine: {'line': b'writing ackermann_odometry.egg-info/PKG-INFO\n'}
+[1.873141] (ackermann_odometry) StdoutLine: {'line': b'writing dependency_links to ackermann_odometry.egg-info/dependency_links.txt\n'}
+[1.873354] (ackermann_odometry) StdoutLine: {'line': b'writing entry points to ackermann_odometry.egg-info/entry_points.txt\n'}
+[1.873556] (ackermann_odometry) StdoutLine: {'line': b'writing requirements to ackermann_odometry.egg-info/requires.txt\n'}
+[1.873625] (ackermann_odometry) StdoutLine: {'line': b'writing top-level names to ackermann_odometry.egg-info/top_level.txt\n'}
+[1.874687] (ackermann_odometry) StdoutLine: {'line': b"writing manifest file 'ackermann_odometry.egg-info/SOURCES.txt'\n"}
+[1.876213] (ackermann_odometry) StdoutLine: {'line': b"reading manifest file 'ackermann_odometry.egg-info/SOURCES.txt'\n"}
+[1.877096] (ackermann_odometry) StdoutLine: {'line': b"writing manifest file 'ackermann_odometry.egg-info/SOURCES.txt'\n"}
+[1.878871] (ackermann_odometry) StdoutLine: {'line': b'running build_ext\n'}
+[1.879228] (ackermann_odometry) StdoutLine: {'line': b'Creating /home/ndtruong/workspace/install/ackermann_odometry/lib/python3.10/site-packages/ackermann-odometry.egg-link (link to .)\n'}
+[1.880338] (ackermann_odometry) StdoutLine: {'line': b'Installing ackermann_odometry script to /home/ndtruong/workspace/install/ackermann_odometry/lib/ackermann_odometry\n'}
+[1.880779] (ackermann_odometry) StdoutLine: {'line': b'\n'}
+[1.880884] (ackermann_odometry) StdoutLine: {'line': b'Installed /home/ndtruong/workspace/build/ackermann_odometry\n'}
+[1.882707] (ackermann_odometry) StdoutLine: {'line': b'running symlink_data\n'}
+[1.882793] (ackermann_odometry) StdoutLine: {'line': b'creating /home/ndtruong/workspace/install/ackermann_odometry/share/ament_index\n'}
+[1.882875] (ackermann_odometry) StdoutLine: {'line': b'creating /home/ndtruong/workspace/install/ackermann_odometry/share/ament_index/resource_index\n'}
+[1.883610] (ackermann_odometry) StdoutLine: {'line': b'creating /home/ndtruong/workspace/install/ackermann_odometry/share/ament_index/resource_index/packages\n'}
+[1.883715] (ackermann_odometry) StdoutLine: {'line': b'symbolically linking /home/ndtruong/workspace/build/ackermann_odometry/resource/ackermann_odometry -> /home/ndtruong/workspace/install/ackermann_odometry/share/ament_index/resource_index/packages\n'}
+[1.883785] (ackermann_odometry) StdoutLine: {'line': b'symbolically linking /home/ndtruong/workspace/build/ackermann_odometry/package.xml -> /home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry\n'}
+[1.883845] (ackermann_odometry) StdoutLine: {'line': b'creating /home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry/launch\n'}
+[1.883906] (ackermann_odometry) StdoutLine: {'line': b'symbolically linking /home/ndtruong/workspace/build/ackermann_odometry/launch/sim_slam.launch.py -> /home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry/launch\n'}
+[1.883980] (ackermann_odometry) StdoutLine: {'line': b'symbolically linking /home/ndtruong/workspace/build/ackermann_odometry/launch/map_server.launch.py -> /home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry/launch\n'}
+[1.884055] (ackermann_odometry) StdoutLine: {'line': b'creating /home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry/config\n'}
+[1.884127] (ackermann_odometry) StdoutLine: {'line': b'symbolically linking /home/ndtruong/workspace/build/ackermann_odometry/config/slam.yaml -> /home/ndtruong/workspace/install/ackermann_odometry/share/ackermann_odometry/config\n'}
+[1.911227] (-) TimerEvent: {}
+[2.011450] (-) TimerEvent: {}
+[2.111730] (-) TimerEvent: {}
+[2.211942] (-) TimerEvent: {}
+[2.312561] (-) TimerEvent: {}
+[2.412757] (-) TimerEvent: {}
+[2.512981] (-) TimerEvent: {}
+[2.613196] (-) TimerEvent: {}
+[2.713401] (-) TimerEvent: {}
+[2.813607] (-) TimerEvent: {}
+[2.913806] (-) TimerEvent: {}
+[3.013987] (-) TimerEvent: {}
+[3.114175] (-) TimerEvent: {}
+[3.214359] (-) TimerEvent: {}
+[3.314488] (-) TimerEvent: {}
+[3.414677] (-) TimerEvent: {}
+[3.514874] (-) TimerEvent: {}
+[3.615090] (-) TimerEvent: {}
+[3.715298] (-) TimerEvent: {}
+[3.815492] (-) TimerEvent: {}
+[3.915676] (-) TimerEvent: {}
+[4.015863] (-) TimerEvent: {}
+[4.116032] (-) TimerEvent: {}
+[4.216238] (-) TimerEvent: {}
+[4.316438] (-) TimerEvent: {}
+[4.416631] (-) TimerEvent: {}
+[4.516928] (-) TimerEvent: {}
+[4.617117] (-) TimerEvent: {}
+[4.717330] (-) TimerEvent: {}
+[4.817502] (-) TimerEvent: {}
+[4.917673] (-) TimerEvent: {}
+[5.017876] (-) TimerEvent: {}
+[5.118045] (-) TimerEvent: {}
+[5.218523] (-) TimerEvent: {}
+[5.318734] (-) TimerEvent: {}
+[5.419487] (-) TimerEvent: {}
+[5.519775] (-) TimerEvent: {}
+[5.619986] (-) TimerEvent: {}
+[5.720182] (-) TimerEvent: {}
+[5.820372] (-) TimerEvent: {}
+[5.920551] (-) TimerEvent: {}
+[6.020734] (-) TimerEvent: {}
+[6.120908] (-) TimerEvent: {}
+[6.221098] (-) TimerEvent: {}
+[6.321282] (-) TimerEvent: {}
+[6.421483] (-) TimerEvent: {}
+[6.521668] (-) TimerEvent: {}
+[6.621870] (-) TimerEvent: {}
+[6.722071] (-) TimerEvent: {}
+[6.822276] (-) TimerEvent: {}
+[6.922482] (-) TimerEvent: {}
+[7.022667] (-) TimerEvent: {}
+[7.122853] (-) TimerEvent: {}
+[7.223047] (-) TimerEvent: {}
+[7.323212] (-) TimerEvent: {}
+[7.423376] (-) TimerEvent: {}
+[7.523542] (-) TimerEvent: {}
+[7.623731] (-) TimerEvent: {}
+[7.724000] (-) TimerEvent: {}
+[7.824205] (-) TimerEvent: {}
+[7.924386] (-) TimerEvent: {}
+[8.024575] (-) TimerEvent: {}
+[8.124796] (-) TimerEvent: {}
+[8.224961] (-) TimerEvent: {}
+[8.325156] (-) TimerEvent: {}
+[8.425360] (-) TimerEvent: {}
+[8.525503] (-) TimerEvent: {}
+[8.625689] (-) TimerEvent: {}
+[8.725859] (-) TimerEvent: {}
+[8.826019] (-) TimerEvent: {}
+[8.926179] (-) TimerEvent: {}
+[9.026347] (-) TimerEvent: {}
+[9.126526] (-) TimerEvent: {}
+[9.226685] (-) TimerEvent: {}
+[9.326888] (-) TimerEvent: {}
+[9.427103] (-) TimerEvent: {}
+[9.527314] (-) TimerEvent: {}
+[9.627492] (-) TimerEvent: {}
+[9.727660] (-) TimerEvent: {}
+[9.827840] (-) TimerEvent: {}
+[9.928030] (-) TimerEvent: {}
+[10.028235] (-) TimerEvent: {}
+[10.128398] (-) TimerEvent: {}
+[10.228571] (-) TimerEvent: {}
+[10.328833] (-) TimerEvent: {}
+[10.429088] (-) TimerEvent: {}
+[10.529270] (-) TimerEvent: {}
+[10.629453] (-) TimerEvent: {}
+[10.729638] (-) TimerEvent: {}
+[10.829898] (-) TimerEvent: {}
+[10.930086] (-) TimerEvent: {}
+[11.030272] (-) TimerEvent: {}
+[11.130577] (-) TimerEvent: {}
+[11.230749] (-) TimerEvent: {}
+[11.330915] (-) TimerEvent: {}
+[11.431093] (-) TimerEvent: {}
+[11.531256] (-) TimerEvent: {}
+[11.631472] (-) TimerEvent: {}
+[11.731632] (-) TimerEvent: {}
+[11.831788] (-) TimerEvent: {}
+[11.931968] (-) TimerEvent: {}
+[12.032192] (-) TimerEvent: {}
+[12.132355] (-) TimerEvent: {}
+[12.232557] (-) TimerEvent: {}
+[12.332715] (-) TimerEvent: {}
+[12.432897] (-) TimerEvent: {}
+[12.533092] (-) TimerEvent: {}
+[12.633272] (-) TimerEvent: {}
+[12.733446] (-) TimerEvent: {}
+[12.833620] (-) TimerEvent: {}
+[12.933800] (-) TimerEvent: {}
+[13.033977] (-) TimerEvent: {}
+[13.134137] (-) TimerEvent: {}
+[13.234321] (-) TimerEvent: {}
+[13.334488] (-) TimerEvent: {}
+[13.434681] (-) TimerEvent: {}
+[13.534873] (-) TimerEvent: {}
+[13.635063] (-) TimerEvent: {}
+[13.735244] (-) TimerEvent: {}
+[13.835546] (-) TimerEvent: {}
+[13.935715] (-) TimerEvent: {}
+[14.035910] (-) TimerEvent: {}
+[14.136106] (-) TimerEvent: {}
+[14.236266] (-) TimerEvent: {}
+[14.336482] (-) TimerEvent: {}
+[14.436662] (-) TimerEvent: {}
+[14.536854] (-) TimerEvent: {}
+[14.637056] (-) TimerEvent: {}
+[14.737272] (-) TimerEvent: {}
+[14.837475] (-) TimerEvent: {}
+[14.937636] (-) TimerEvent: {}
+[15.037818] (-) TimerEvent: {}
+[15.138013] (-) TimerEvent: {}
+[15.238202] (-) TimerEvent: {}
+[15.338361] (-) TimerEvent: {}
+[15.438484] (-) TimerEvent: {}
+[15.538639] (-) TimerEvent: {}
+[15.638814] (-) TimerEvent: {}
+[15.738999] (-) TimerEvent: {}
+[15.839187] (-) TimerEvent: {}
+[15.939488] (-) TimerEvent: {}
+[16.039660] (-) TimerEvent: {}
+[16.139825] (-) TimerEvent: {}
+[16.240024] (-) TimerEvent: {}
+[16.340223] (-) TimerEvent: {}
+[16.440429] (-) TimerEvent: {}
+[16.540648] (-) TimerEvent: {}
+[16.640817] (-) TimerEvent: {}
+[16.740992] (-) TimerEvent: {}
+[16.841191] (-) TimerEvent: {}
+[16.941463] (-) TimerEvent: {}
+[17.041652] (-) TimerEvent: {}
+[17.141853] (-) TimerEvent: {}
+[17.242044] (-) TimerEvent: {}
+[17.342242] (-) TimerEvent: {}
+[17.442457] (-) TimerEvent: {}
+[17.542623] (-) TimerEvent: {}
+[17.642791] (-) TimerEvent: {}
+[17.742953] (-) TimerEvent: {}
+[17.843115] (-) TimerEvent: {}
+[17.943302] (-) TimerEvent: {}
+[18.043618] (-) TimerEvent: {}
+[18.143787] (-) TimerEvent: {}
+[18.244106] (-) TimerEvent: {}
+[18.344292] (-) TimerEvent: {}
+[18.444533] (-) TimerEvent: {}
+[18.544709] (-) TimerEvent: {}
+[18.644918] (-) TimerEvent: {}
+[18.745112] (-) TimerEvent: {}
+[18.845278] (-) TimerEvent: {}
+[18.945486] (-) TimerEvent: {}
+[19.045653] (-) TimerEvent: {}
+[19.145843] (-) TimerEvent: {}
+[19.246170] (-) TimerEvent: {}
+[19.346372] (-) TimerEvent: {}
+[19.446551] (-) TimerEvent: {}
+[19.546723] (-) TimerEvent: {}
+[19.647058] (-) TimerEvent: {}
+[19.747261] (-) TimerEvent: {}
+[19.847485] (-) TimerEvent: {}
+[19.947658] (-) TimerEvent: {}
+[20.047861] (-) TimerEvent: {}
+[20.148049] (-) TimerEvent: {}
+[20.248243] (-) TimerEvent: {}
+[20.348401] (-) TimerEvent: {}
+[20.448633] (-) TimerEvent: {}
+[20.548839] (-) TimerEvent: {}
+[20.649050] (-) TimerEvent: {}
+[20.749249] (-) TimerEvent: {}
+[20.849442] (-) TimerEvent: {}
+[20.949630] (-) TimerEvent: {}
+[21.049824] (-) TimerEvent: {}
+[21.150009] (-) TimerEvent: {}
+[21.250205] (-) TimerEvent: {}
+[21.350396] (-) TimerEvent: {}
+[21.450566] (-) TimerEvent: {}
+[21.550733] (-) TimerEvent: {}
+[21.650936] (-) TimerEvent: {}
+[21.751130] (-) TimerEvent: {}
+[21.851324] (-) TimerEvent: {}
+[21.951481] (-) TimerEvent: {}
+[22.051641] (-) TimerEvent: {}
+[22.151831] (-) TimerEvent: {}
+[22.252035] (-) TimerEvent: {}
+[22.352235] (-) TimerEvent: {}
+[22.452439] (-) TimerEvent: {}
+[22.552614] (-) TimerEvent: {}
+[22.652810] (-) TimerEvent: {}
+[22.752988] (-) TimerEvent: {}
+[22.853172] (-) TimerEvent: {}
+[22.953354] (-) TimerEvent: {}
+[23.053501] (-) TimerEvent: {}
+[23.153667] (-) TimerEvent: {}
+[23.253943] (-) TimerEvent: {}
+[23.354130] (-) TimerEvent: {}
+[23.454311] (-) TimerEvent: {}
+[23.554512] (-) TimerEvent: {}
+[23.654691] (-) TimerEvent: {}
+[23.754892] (-) TimerEvent: {}
+[23.855097] (-) TimerEvent: {}
+[23.955282] (-) TimerEvent: {}
+[24.055477] (-) TimerEvent: {}
+[24.155665] (-) TimerEvent: {}
+[24.255851] (-) TimerEvent: {}
+[24.356028] (-) TimerEvent: {}
+[24.456205] (-) TimerEvent: {}
+[24.556383] (-) TimerEvent: {}
+[24.656566] (-) TimerEvent: {}
+[24.756799] (-) TimerEvent: {}
+[24.857054] (-) TimerEvent: {}
+[24.957256] (-) TimerEvent: {}
+[25.057473] (-) TimerEvent: {}
+[25.157692] (-) TimerEvent: {}
+[25.257892] (-) TimerEvent: {}
+[25.358060] (-) TimerEvent: {}
+[25.458254] (-) TimerEvent: {}
+[25.558414] (-) TimerEvent: {}
+[25.658604] (-) TimerEvent: {}
+[25.758785] (-) TimerEvent: {}
+[25.858971] (-) TimerEvent: {}
+[25.959155] (-) TimerEvent: {}
+[26.059349] (-) TimerEvent: {}
+[26.159555] (-) TimerEvent: {}
+[26.259765] (-) TimerEvent: {}
+[26.359975] (-) TimerEvent: {}
+[26.460163] (-) TimerEvent: {}
+[26.560356] (-) TimerEvent: {}
+[26.660551] (-) TimerEvent: {}
+[26.760700] (-) TimerEvent: {}
+[26.860890] (-) TimerEvent: {}
+[26.961068] (-) TimerEvent: {}
+[27.061259] (-) TimerEvent: {}
+[27.161458] (-) TimerEvent: {}
+[27.261637] (-) TimerEvent: {}
+[27.361833] (-) TimerEvent: {}
+[27.462016] (-) TimerEvent: {}
+[27.562275] (-) TimerEvent: {}
+[27.662513] (-) TimerEvent: {}
+[27.762714] (-) TimerEvent: {}
+[27.862897] (-) TimerEvent: {}
+[27.963068] (-) TimerEvent: {}
+[28.063236] (-) TimerEvent: {}
+[28.163397] (-) TimerEvent: {}
+[28.263570] (-) TimerEvent: {}
+[28.363737] (-) TimerEvent: {}
+[28.463937] (-) TimerEvent: {}
+[28.564139] (-) TimerEvent: {}
+[28.664341] (-) TimerEvent: {}
+[28.764491] (-) TimerEvent: {}
+[28.864662] (-) TimerEvent: {}
+[28.964846] (-) TimerEvent: {}
+[29.065032] (-) TimerEvent: {}
+[29.165235] (-) TimerEvent: {}
+[29.265472] (-) TimerEvent: {}
+[29.365637] (-) TimerEvent: {}
+[29.465829] (-) TimerEvent: {}
+[29.566020] (-) TimerEvent: {}
+[29.666186] (-) TimerEvent: {}
+[29.766360] (-) TimerEvent: {}
+[29.866483] (-) TimerEvent: {}
+[29.966661] (-) TimerEvent: {}
+[30.066824] (-) TimerEvent: {}
+[30.167008] (-) TimerEvent: {}
+[30.267201] (-) TimerEvent: {}
+[30.367368] (-) TimerEvent: {}
+[30.467556] (-) TimerEvent: {}
+[30.567750] (-) TimerEvent: {}
+[30.667923] (-) TimerEvent: {}
+[30.768093] (-) TimerEvent: {}
+[30.868276] (-) TimerEvent: {}
+[30.968482] (-) TimerEvent: {}
+[31.068682] (-) TimerEvent: {}
+[31.168874] (-) TimerEvent: {}
+[31.269048] (-) TimerEvent: {}
+[31.369254] (-) TimerEvent: {}
+[31.469420] (-) TimerEvent: {}
+[31.569623] (-) TimerEvent: {}
+[31.669805] (-) TimerEvent: {}
+[31.770000] (-) TimerEvent: {}
+[31.870166] (-) TimerEvent: {}
+[31.970338] (-) TimerEvent: {}
+[32.070493] (-) TimerEvent: {}
+[32.170658] (-) TimerEvent: {}
+[32.270846] (-) TimerEvent: {}
+[32.371033] (-) TimerEvent: {}
+[32.471199] (-) TimerEvent: {}
+[32.571385] (-) TimerEvent: {}
+[32.671635] (-) TimerEvent: {}
+[32.771837] (-) TimerEvent: {}
+[32.872036] (-) TimerEvent: {}
+[32.972221] (-) TimerEvent: {}
+[33.072407] (-) TimerEvent: {}
+[33.172571] (-) TimerEvent: {}
+[33.272735] (-) TimerEvent: {}
+[33.372902] (-) TimerEvent: {}
+[33.473089] (-) TimerEvent: {}
+[33.573270] (-) TimerEvent: {}
+[33.673472] (-) TimerEvent: {}
+[33.773637] (-) TimerEvent: {}
+[33.873777] (-) TimerEvent: {}
+[33.973959] (-) TimerEvent: {}
+[34.074125] (-) TimerEvent: {}
+[34.174286] (-) TimerEvent: {}
+[34.274544] (-) TimerEvent: {}
+[34.374717] (-) TimerEvent: {}
+[34.474922] (-) TimerEvent: {}
+[34.575117] (-) TimerEvent: {}
+[34.675287] (-) TimerEvent: {}
+[34.775511] (-) TimerEvent: {}
+[34.875691] (-) TimerEvent: {}
+[34.975895] (-) TimerEvent: {}
+[35.076180] (-) TimerEvent: {}
+[35.176349] (-) TimerEvent: {}
+[35.276531] (-) TimerEvent: {}
+[35.376691] (-) TimerEvent: {}
+[35.476875] (-) TimerEvent: {}
+[35.577057] (-) TimerEvent: {}
+[35.677260] (-) TimerEvent: {}
+[35.777489] (-) TimerEvent: {}
+[35.877652] (-) TimerEvent: {}
+[35.977923] (-) TimerEvent: {}
+[36.078120] (-) TimerEvent: {}
+[36.178322] (-) TimerEvent: {}
+[36.278527] (-) TimerEvent: {}
+[36.378686] (-) TimerEvent: {}
+[36.478879] (-) TimerEvent: {}
+[36.579073] (-) TimerEvent: {}
+[36.679268] (-) TimerEvent: {}
+[36.779489] (-) TimerEvent: {}
+[36.879672] (-) TimerEvent: {}
+[36.979846] (-) TimerEvent: {}
+[37.080035] (-) TimerEvent: {}
+[37.180231] (-) TimerEvent: {}
+[37.280434] (-) TimerEvent: {}
+[37.380611] (-) TimerEvent: {}
+[37.480788] (-) TimerEvent: {}
+[37.581067] (-) TimerEvent: {}
+[37.681270] (-) TimerEvent: {}
+[37.781485] (-) TimerEvent: {}
+[37.881651] (-) TimerEvent: {}
+[37.981843] (-) TimerEvent: {}
+[38.082037] (-) TimerEvent: {}
+[38.182217] (-) TimerEvent: {}
+[38.282434] (-) TimerEvent: {}
+[38.382601] (-) TimerEvent: {}
+[38.482796] (-) TimerEvent: {}
+[38.582989] (-) TimerEvent: {}
+[38.683262] (-) TimerEvent: {}
+[38.783466] (-) TimerEvent: {}
+[38.883634] (-) TimerEvent: {}
+[38.983823] (-) TimerEvent: {}
+[39.083993] (-) TimerEvent: {}
+[39.184158] (-) TimerEvent: {}
+[39.284354] (-) TimerEvent: {}
+[39.384521] (-) TimerEvent: {}
+[39.484691] (-) TimerEvent: {}
+[39.584855] (-) TimerEvent: {}
+[39.685070] (-) TimerEvent: {}
+[39.785280] (-) TimerEvent: {}
+[39.885512] (-) TimerEvent: {}
+[39.985763] (-) TimerEvent: {}
+[40.085965] (-) TimerEvent: {}
+[40.186188] (-) TimerEvent: {}
+[40.286389] (-) TimerEvent: {}
+[40.386703] (-) TimerEvent: {}
+[40.486893] (-) TimerEvent: {}
+[40.587103] (-) TimerEvent: {}
+[40.687301] (-) TimerEvent: {}
+[40.787511] (-) TimerEvent: {}
+[40.887673] (-) TimerEvent: {}
+[40.987831] (-) TimerEvent: {}
+[41.088013] (-) TimerEvent: {}
+[41.188221] (-) TimerEvent: {}
+[41.288421] (-) TimerEvent: {}
+[41.388592] (-) TimerEvent: {}
+[41.488795] (-) TimerEvent: {}
+[41.588981] (-) TimerEvent: {}
+[41.689190] (-) TimerEvent: {}
+[41.789504] (-) TimerEvent: {}
+[41.889777] (-) TimerEvent: {}
+[41.989966] (-) TimerEvent: {}
+[42.090160] (-) TimerEvent: {}
+[42.190349] (-) TimerEvent: {}
+[42.290520] (-) TimerEvent: {}
+[42.390692] (-) TimerEvent: {}
+[42.490957] (-) TimerEvent: {}
+[42.591161] (-) TimerEvent: {}
+[42.691324] (-) TimerEvent: {}
+[42.791600] (-) TimerEvent: {}
+[42.891768] (-) TimerEvent: {}
+[42.991963] (-) TimerEvent: {}
+[43.092253] (-) TimerEvent: {}
+[43.192529] (-) TimerEvent: {}
+[43.292811] (-) TimerEvent: {}
+[43.393167] (-) TimerEvent: {}
+[43.493436] (-) TimerEvent: {}
+[43.593752] (-) TimerEvent: {}
+[43.693992] (-) TimerEvent: {}
+[43.794167] (-) TimerEvent: {}
+[43.894358] (-) TimerEvent: {}
+[43.994534] (-) TimerEvent: {}
+[44.094709] (-) TimerEvent: {}
+[44.194903] (-) TimerEvent: {}
+[44.295075] (-) TimerEvent: {}
+[44.395262] (-) TimerEvent: {}
+[44.495448] (-) TimerEvent: {}
+[44.595623] (-) TimerEvent: {}
+[44.695789] (-) TimerEvent: {}
+[44.795987] (-) TimerEvent: {}
+[44.896166] (-) TimerEvent: {}
+[44.996344] (-) TimerEvent: {}
+[45.096520] (-) TimerEvent: {}
+[45.196685] (-) TimerEvent: {}
+[45.296880] (-) TimerEvent: {}
+[45.397078] (-) TimerEvent: {}
+[45.497245] (-) TimerEvent: {}
+[45.597432] (-) TimerEvent: {}
+[45.697619] (-) TimerEvent: {}
+[45.797785] (-) TimerEvent: {}
+[45.897966] (-) TimerEvent: {}
+[45.998146] (-) TimerEvent: {}
+[46.098323] (-) TimerEvent: {}
+[46.198485] (-) TimerEvent: {}
+[46.298647] (-) TimerEvent: {}
+[46.398823] (-) TimerEvent: {}
+[46.499005] (-) TimerEvent: {}
+[46.599272] (-) TimerEvent: {}
+[46.699462] (-) TimerEvent: {}
+[46.799669] (-) TimerEvent: {}
+[46.899842] (-) TimerEvent: {}
+[47.000043] (-) TimerEvent: {}
+[47.100205] (-) TimerEvent: {}
+[47.200397] (-) TimerEvent: {}
+[47.300568] (-) TimerEvent: {}
+[47.400732] (-) TimerEvent: {}
+[47.500925] (-) TimerEvent: {}
+[47.601089] (-) TimerEvent: {}
+[47.701285] (-) TimerEvent: {}
+[47.801511] (-) TimerEvent: {}
+[47.901687] (-) TimerEvent: {}
+[48.001859] (-) TimerEvent: {}
+[48.102063] (-) TimerEvent: {}
+[48.202253] (-) TimerEvent: {}
+[48.302544] (-) TimerEvent: {}
+[48.402707] (-) TimerEvent: {}
+[48.502995] (-) TimerEvent: {}
+[48.603158] (-) TimerEvent: {}
+[48.703347] (-) TimerEvent: {}
+[48.803508] (-) TimerEvent: {}
+[48.903680] (-) TimerEvent: {}
+[49.003898] (-) TimerEvent: {}
+[49.104112] (-) TimerEvent: {}
+[49.204286] (-) TimerEvent: {}
+[49.304564] (-) TimerEvent: {}
+[49.404729] (-) TimerEvent: {}
+[49.504919] (-) TimerEvent: {}
+[49.605083] (-) TimerEvent: {}
+[49.705290] (-) TimerEvent: {}
+[49.805488] (-) TimerEvent: {}
+[49.905665] (-) TimerEvent: {}
+[50.005848] (-) TimerEvent: {}
+[50.106048] (-) TimerEvent: {}
+[50.206213] (-) TimerEvent: {}
+[50.306384] (-) TimerEvent: {}
+[50.406590] (-) TimerEvent: {}
+[50.506760] (-) TimerEvent: {}
+[50.607030] (-) TimerEvent: {}
+[50.707196] (-) TimerEvent: {}
+[50.807392] (-) TimerEvent: {}
+[50.907560] (-) TimerEvent: {}
+[51.007718] (-) TimerEvent: {}
+[51.107910] (-) TimerEvent: {}
+[51.208095] (-) TimerEvent: {}
+[51.308284] (-) TimerEvent: {}
+[51.408470] (-) TimerEvent: {}
+[51.508635] (-) TimerEvent: {}
+[51.608812] (-) TimerEvent: {}
+[51.708973] (-) TimerEvent: {}
+[51.809166] (-) TimerEvent: {}
+[51.909350] (-) TimerEvent: {}
+[52.009520] (-) TimerEvent: {}
+[52.109687] (-) TimerEvent: {}
+[52.209859] (-) TimerEvent: {}
+[52.310015] (-) TimerEvent: {}
+[52.410204] (-) TimerEvent: {}
+[52.510389] (-) TimerEvent: {}
+[52.610593] (-) TimerEvent: {}
+[52.710822] (-) TimerEvent: {}
+[52.811045] (-) TimerEvent: {}
+[52.911248] (-) TimerEvent: {}
+[53.011435] (-) TimerEvent: {}
+[53.111594] (-) TimerEvent: {}
+[53.211800] (-) TimerEvent: {}
+[53.311992] (-) TimerEvent: {}
+[53.412172] (-) TimerEvent: {}
+[53.512384] (-) TimerEvent: {}
+[53.612550] (-) TimerEvent: {}
+[53.712741] (-) TimerEvent: {}
+[53.812930] (-) TimerEvent: {}
+[53.913123] (-) TimerEvent: {}
+[54.013307] (-) TimerEvent: {}
+[54.113483] (-) TimerEvent: {}
+[54.213658] (-) TimerEvent: {}
+[54.313843] (-) TimerEvent: {}
+[54.414037] (-) TimerEvent: {}
+[54.514233] (-) TimerEvent: {}
+[54.614438] (-) TimerEvent: {}
+[54.714628] (-) TimerEvent: {}
+[54.814831] (-) TimerEvent: {}
+[54.915023] (-) TimerEvent: {}
+[55.015221] (-) TimerEvent: {}
+[55.115405] (-) TimerEvent: {}
+[55.215590] (-) TimerEvent: {}
+[55.315783] (-) TimerEvent: {}
+[55.415981] (-) TimerEvent: {}
+[55.516177] (-) TimerEvent: {}
+[55.616368] (-) TimerEvent: {}
+[55.716538] (-) TimerEvent: {}
+[55.816700] (-) TimerEvent: {}
+[55.916891] (-) TimerEvent: {}
+[56.017075] (-) TimerEvent: {}
+[56.117287] (-) TimerEvent: {}
+[56.217516] (-) TimerEvent: {}
+[56.317690] (-) TimerEvent: {}
+[56.417852] (-) TimerEvent: {}
+[56.518064] (-) TimerEvent: {}
+[56.618264] (-) TimerEvent: {}
+[56.718417] (-) TimerEvent: {}
+[56.818594] (-) TimerEvent: {}
+[56.918767] (-) TimerEvent: {}
+[57.018957] (-) TimerEvent: {}
+[57.119153] (-) TimerEvent: {}
+[57.219354] (-) TimerEvent: {}
+[57.319533] (-) TimerEvent: {}
+[57.419717] (-) TimerEvent: {}
+[57.519944] (-) TimerEvent: {}
+[57.620148] (-) TimerEvent: {}
+[57.720356] (-) TimerEvent: {}
+[57.820599] (-) TimerEvent: {}
+[57.920765] (-) TimerEvent: {}
+[58.021034] (-) TimerEvent: {}
+[58.121228] (-) TimerEvent: {}
+[58.221413] (-) TimerEvent: {}
+[58.321593] (-) TimerEvent: {}
+[58.421771] (-) TimerEvent: {}
+[58.521945] (-) TimerEvent: {}
+[58.622150] (-) TimerEvent: {}
+[58.722351] (-) TimerEvent: {}
+[58.822484] (-) TimerEvent: {}
+[58.922646] (-) TimerEvent: {}
+[59.022817] (-) TimerEvent: {}
+[59.123019] (-) TimerEvent: {}
+[59.223219] (-) TimerEvent: {}
+[59.323399] (-) TimerEvent: {}
+[59.423590] (-) TimerEvent: {}
+[59.523809] (-) TimerEvent: {}
+[59.624008] (-) TimerEvent: {}
+[59.724204] (-) TimerEvent: {}
+[59.824395] (-) TimerEvent: {}
+[59.924570] (-) TimerEvent: {}
+[60.024696] (-) TimerEvent: {}
+[60.124865] (-) TimerEvent: {}
+[60.225031] (-) TimerEvent: {}
+[60.325225] (-) TimerEvent: {}
+[60.425413] (-) TimerEvent: {}
+[60.525701] (-) TimerEvent: {}
+[60.625973] (-) TimerEvent: {}
+[60.726320] (-) TimerEvent: {}
+[60.826593] (-) TimerEvent: {}
+[60.926766] (-) TimerEvent: {}
+[61.026964] (-) TimerEvent: {}
+[61.127158] (-) TimerEvent: {}
+[61.227361] (-) TimerEvent: {}
+[61.327499] (-) TimerEvent: {}
+[61.427677] (-) TimerEvent: {}
+[61.527844] (-) TimerEvent: {}
+[61.628048] (-) TimerEvent: {}
+[61.728255] (-) TimerEvent: {}
+[61.828476] (-) TimerEvent: {}
+[61.928801] (-) TimerEvent: {}
+[62.029134] (-) TimerEvent: {}
+[62.129434] (-) TimerEvent: {}
+[62.229598] (-) TimerEvent: {}
+[62.329773] (-) TimerEvent: {}
+[62.429970] (-) TimerEvent: {}
+[62.530244] (-) TimerEvent: {}
+[62.630465] (-) TimerEvent: {}
+[62.730637] (-) TimerEvent: {}
+[62.830849] (-) TimerEvent: {}
+[62.931141] (-) TimerEvent: {}
+[63.031384] (-) TimerEvent: {}
+[63.131597] (-) TimerEvent: {}
+[63.231779] (-) TimerEvent: {}
+[63.331981] (-) TimerEvent: {}
+[63.432158] (-) TimerEvent: {}
+[63.532336] (-) TimerEvent: {}
+[63.632524] (-) TimerEvent: {}
+[63.732720] (-) TimerEvent: {}
+[63.832900] (-) TimerEvent: {}
+[63.933168] (-) TimerEvent: {}
+[64.033459] (-) TimerEvent: {}
+[64.133721] (-) TimerEvent: {}
+[64.234014] (-) TimerEvent: {}
+[64.334191] (-) TimerEvent: {}
