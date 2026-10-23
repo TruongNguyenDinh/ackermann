@@ -18,7 +18,6 @@ def generate_launch_description():
     slam_params_file = LaunchConfiguration('slam_params_file')
     slam_executable = LaunchConfiguration('slam_executable')
     wheelbase = LaunchConfiguration('wheelbase')
-    gui = LaunchConfiguration('gui')
 
     # =========================================================
     # Package description
@@ -48,33 +47,19 @@ def generate_launch_description():
     # =========================================================
 
     odom_node = Node(
-        package='ackermann_odometry',
+        package='ackermann_odometry_cpp',
         executable='ackermann_odometry',
         name='ackermann_odometry',
         output='screen',
-        parameters=[
-            {'use_sim_time': True}
-        ]
     )
 
-    # =========================================================
-    # SLAM Toolbox
-    #
-    # executable mặc định: async_slam_toolbox_node (chế độ mapping)
-    # để dùng localization, override qua launch argument:
-    #   slam_executable:=localization_slam_toolbox_node
-    #   slam_params_file:=<path_toi_slam_localization.yaml>
-    # =========================================================
 
     slam_node = Node(
         package='slam_toolbox',
         executable=slam_executable,
         name='slam_toolbox',
         output='screen',
-        parameters=[
-            slam_params_file,
-            {'use_sim_time': True}
-        ],
+        parameters=[slam_params_file],
         remappings=[
             ('scan', '/scan')
         ]
@@ -88,7 +73,11 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             description_launch
         ),
-        launch_arguments={'wheelbase': wheelbase, 'gui': gui}.items(),
+        launch_arguments={
+            'wheelbase': wheelbase,
+            'publish_joint_states': 'false',
+            'launch_rviz': 'false',
+        }.items(),
     )
 
     start_odom = TimerAction(
@@ -121,11 +110,6 @@ def generate_launch_description():
             'wheelbase',
             default_value='0.3187',
             description='Wheelbase in meters, passed to the robot Xacro',
-        ),
-        DeclareLaunchArgument(
-            'gui',
-            default_value='false',
-            description='Show the Gazebo GUI client',
         ),
 
         start_description,

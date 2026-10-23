@@ -43,7 +43,6 @@ def generate_launch_description():
         'nav2_params.yaml'
     )
     wheelbase = LaunchConfiguration('wheelbase')
-    gui = LaunchConfiguration('gui')
 
     # Config localization nam trong chinh package ackermann_navigation,
     # KHONG phai ackermann_odometry nua
@@ -63,11 +62,10 @@ def generate_launch_description():
             'slam_params_file': localization_config,
             'slam_executable': 'localization_slam_toolbox_node',
             'wheelbase': wheelbase,
-            'gui': gui,
         }.items()
     )
 
-    # Give Gazebo, odometry, and SLAM time to publish /scan, /odom, /map,
+    # Give hardware odometry and SLAM time to publish /scan, /odom, /map,
     # and map->odom before Nav2 activates its costmaps.
     start_navigation = TimerAction(
         period=15.0,
@@ -76,7 +74,6 @@ def generate_launch_description():
                 PythonLaunchDescriptionSource(nav2_launch),
                 launch_arguments={
                     'params_file': LaunchConfiguration('params_file'),
-                    'use_sim_time': 'true',
                 }.items()
             )
         ]
@@ -87,13 +84,12 @@ def generate_launch_description():
     # =========================================================
 
     kinematic_node = Node(
-        package='ackermann_kinematics_py',
+        package='ackermann_kinematics',
         executable='ackerman_kinematic',
         name='ackerman_kinematic',
         output='screen',
         parameters=[
             {
-                'use_sim_time': True,
                 'wheelbase': ParameterValue(wheelbase, value_type=float),
             }
         ]
@@ -109,11 +105,6 @@ def generate_launch_description():
             'wheelbase',
             default_value='0.3187',
             description='Wheelbase in meters, shared by URDF and kinematics',
-        ),
-        DeclareLaunchArgument(
-            'gui',
-            default_value='false',
-            description='Show the Gazebo GUI client',
         ),
         start_sim_slam,
         kinematic_node,

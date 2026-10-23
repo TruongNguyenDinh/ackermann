@@ -29,7 +29,6 @@ def generate_launch_description():
     )
 
     params_file = LaunchConfiguration('params_file')
-    use_sim_time = LaunchConfiguration('use_sim_time')
 
     lifecycle_nodes = [
         'controller_server',
@@ -109,7 +108,6 @@ def generate_launch_description():
         output='screen',
         parameters=[
             {
-                'use_sim_time': use_sim_time,
                 'autostart': True,
                 'node_names': lifecycle_nodes,
             }
@@ -122,11 +120,6 @@ def generate_launch_description():
             'params_file',
             default_value=default_params_path,
             description='Duong dan file nav2_params.yaml'
-        ),
-        DeclareLaunchArgument(
-            'use_sim_time',
-            default_value='true',
-            description='Use simulation time'
         ),
         controller_server_node,
         planner_server_node,

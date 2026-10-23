@@ -33,10 +33,16 @@ The ROS 2 development environment runs inside an existing Docker container on th
 
 - Start an interactive Bash session in the container with:
 
-  \`\`\`bash
-
+  ```bash
   docker exec -it elegant_jennings bash
+  ```
 
+## Real Robot Visualization
+
+- The target is a physical Ackermann robot; Gazebo is no longer part of the development or run workflow. Do not start Gazebo or make robot visualization depend on a Gazebo world/plugin.
+- Use `ackermann_description/launch/model.launch.py` for a robot-only RViz view with `robot_state_publisher` and `joint_state_publisher`.
+- Keep the launch argument `map` available for future map integration. The default robot-only view does not load a map.
+- Use `base_footprint` as RViz's fixed frame when no localization/map TF is running.
 
 
 ## Coding Style &amp; Naming Conventions

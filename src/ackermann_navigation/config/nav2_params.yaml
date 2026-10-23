@@ -1,7 +1,5 @@
-
 bt_navigator:
   ros__parameters:
-    use_sim_time: True
     global_frame: map
     robot_base_frame: base_footprint
     odom_topic: /odom
@@ -61,15 +59,11 @@ bt_navigator:
 
 bt_navigator_navigate_through_poses_rclcpp_node:
   ros__parameters:
-    use_sim_time: True
-
 bt_navigator_navigate_to_pose_rclcpp_node:
   ros__parameters:
-    use_sim_time: True
-
 controller_server:
   ros__parameters:
-    use_sim_time: True
+    # Giữ 20 Hz + model_dt 0.05 như bản cũ: vòng điều khiển dày, bám path tốt hơn
     controller_frequency: 20.0
     min_x_velocity_threshold: 0.001
     min_y_velocity_threshold: 0.5
@@ -85,30 +79,28 @@ controller_server:
       required_movement_radius: 0.2
       movement_time_allowance: 15.0
     # Goal checker parameters
-    #precise_goal_checker:
-    #  plugin: "nav2_controller::SimpleGoalChecker"
-    #  xy_goal_tolerance: 0.25
-    #  yaw_goal_tolerance: 0.25
-    #  stateful: True
     general_goal_checker:
       stateful: True
       plugin: "nav2_controller::SimpleGoalChecker"
       xy_goal_tolerance: 0.10
       yaw_goal_tolerance: 0.25
-    # DWB parameters
-    # DWB parameters
+
     FollowPath:
       plugin: "nav2_mppi_controller::MPPIController"
+      # Keep the original horizon to avoid increasing MPPI compute cost.
       time_steps: 56
       model_dt: 0.05
       batch_size: 2000
       vx_std: 0.2
       vy_std: 0.0
-      wz_std: 0.4
+      # TỐI ƯU: 0.4 -> 0.25. Ackermann bị giới hạn wz <= vx/min_turning_r (~0.19 rad/s),
+      # std 0.4 làm đa số mẫu bị cắt về giới hạn nên thiếu đa dạng.
+      wz_std: 0.25
       vx_max: 0.26
       vx_min: -0.26
       vy_max: 0.0
-      wz_max: 0.6
+      # At vx_max, this is bounded by the 1.3453 m minimum turning radius.
+      wz_max: 0.19
       iteration_count: 1
       prune_distance: 1.7
       transform_tolerance: 0.2
@@ -140,8 +132,6 @@ controller_server:
         enabled: true
         cost_power: 1
         cost_weight: 3.0
-        # Start aligning to the requested final heading before the vehicle
-        # enters the last half-meter and has no room for an Ackermann turn.
         threshold_to_consider: 1.0
       PathAlignCritic:
         enabled: true
@@ -150,8 +140,8 @@ controller_server:
         max_path_occupancy_ratio: 0.05
         trajectory_point_step: 4
         threshold_to_consider: 0.5
-        # Smac Hybrid publishes feasible pose orientations, including reverse
-        # sections. Respect them so MPPI does not choose the opposite direction.
+        # Smac Hybrid (Reeds-Shepp) có đoạn lùi: tôn trọng hướng của path
+        # để MPPI không chọn chiều ngược lại.
         use_path_orientations: true
       PathFollowCritic:
         enabled: true
@@ -175,14 +165,14 @@ local_costmap:
       publish_frequency: 2.0
       global_frame: odom
       robot_base_frame: base_footprint
-      use_sim_time: True
       rolling_window: true
-      width: 3
-      height: 3
+      # TỐI ƯU: 3 -> 4 m để phủ hết quỹ đạo MPPI (~0.83 m) cộng footprint
+      width: 4
+      height: 4
       resolution: 0.05
       # Estimated outline relative to rear-axle base_footprint; synchronize
       # with Xacro dimensions after measuring the drawing endpoints.
-      footprint: "[[0.3817, 0.181], [0.2817, 0.181], [0.2317, 0.090], [0.1000, 0.090], [0.0500, 0.181], [-0.0630, 0.181], [-0.0630, -0.181], [0.0500, -0.181], [0.1000, -0.090], [0.2317, -0.090], [0.2817, -0.181], [0.3817, -0.181]]"
+      footprint: "[[0.3817, 0.181], [0.2557, 0.181], [0.2526, 0.119], [0.2026, 0.090], [0.1161, 0.090], [0.0661, 0.119], [0.0630, 0.181], [-0.0630, 0.181], [-0.0630, -0.181], [0.0630, -0.181], [0.0661, -0.119], [0.1161, -0.090], [0.2026, -0.090], [0.2526, -0.119], [0.2557, -0.181], [0.3817, -0.181]]"
       plugins: ["voxel_layer", "inflation_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
@@ -208,9 +198,6 @@ local_costmap:
           raytrace_min_range: 0.0
           obstacle_max_range: 2.5
           obstacle_min_range: 0.0
-      static_layer:
-        plugin: "nav2_costmap_2d::StaticLayer"
-        map_subscribe_transient_local: True
       always_send_full_costmap: True
 
 global_costmap:
@@ -220,8 +207,7 @@ global_costmap:
       publish_frequency: 1.0
       global_frame: map
       robot_base_frame: base_footprint
-      use_sim_time: True
-      footprint: "[[0.3817, 0.181], [0.2817, 0.181], [0.2317, 0.090], [0.1000, 0.090], [0.0500, 0.181], [-0.0630, 0.181], [-0.0630, -0.181], [0.0500, -0.181], [0.1000, -0.090], [0.2317, -0.090], [0.2817, -0.181], [0.3817, -0.181]]"
+      footprint: "[[0.3817, 0.181], [0.2557, 0.181], [0.2526, 0.119], [0.2026, 0.090], [0.1161, 0.090], [0.0661, 0.119], [0.0630, 0.181], [-0.0630, 0.181], [-0.0630, -0.181], [0.0630, -0.181], [0.0661, -0.119], [0.1161, -0.090], [0.2026, -0.090], [0.2526, -0.119], [0.2557, -0.181], [0.3817, -0.181]]"
       resolution: 0.05
       track_unknown_space: true
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
@@ -250,14 +236,11 @@ global_costmap:
 
 map_server:
   ros__parameters:
-    use_sim_time: True
     # Overridden in launch by the "map" launch configuration or provided default value.
-    # To use in yaml, remove the default "map" value in the tb3_simulation_launch.py file & provide full path to map below.
     yaml_filename: ""
 
 map_saver:
   ros__parameters:
-    use_sim_time: True
     save_map_timeout: 5.0
     free_thresh_default: 0.25
     occupied_thresh_default: 0.65
@@ -265,37 +248,41 @@ map_saver:
 
 planner_server:
   ros__parameters:
-    expected_planner_frequency: 5.0
-    use_sim_time: True
+    # Both Ackermann behavior trees refresh paths every 5 seconds.
+    expected_planner_frequency: 0.2
     planner_plugins: ["GridBased"]
     GridBased:
       plugin: "nav2_smac_planner/SmacPlannerHybrid"
       downsample_costmap: false
       downsampling_factor: 1
-      # Keep planner fallback endpoints close to the requested goal; the
-      # controller goal checker is tighter than the old 0.25 m tolerance.
       tolerance: 0.05
       allow_unknown: true
       max_iterations: 1000000
       max_on_approach_iterations: 1000
-      max_planning_time: 5.0
+      # TỐI ƯU: 5.0 -> 2.0 để path không bị cũ so với vị trí xe (0.26 m/s * 5 s = 1.3 m)
+      max_planning_time: 2.0
+      # Khôi phục REEDS_SHEPP: cho phép lùi nên quãng đường ngắn hơn nhiều
       motion_model_for_search: "REEDS_SHEPP"
       angle_quantization_bins: 72
-      # Match 15 deg maximum inner-wheel angle and the Ackermann geometry.
-      minimum_turning_radius: 1.3453
-      # Prefer forward arcs; keep reverse available for tight goal approaches.
+      # Add planner margin for lattice discretization: live plans measured
+      # about 1.18 m versus the 1.345 m geometric steering limit.
+      minimum_turning_radius: 1.55
+      # Ưu tiên đi tiến, vẫn cho phép lùi khi cần
       reverse_penalty: 2.0
-      # Discourage unnecessary forward/reverse gear changes while still
-      # allowing Reeds-Shepp to reverse when a tight goal requires it.
-      change_penalty: 0.5
+      # Hạn chế đổi chiều tiến/lùi không cần thiết
+      # Penalize repeated forward/reverse gear changes on near-goal paths.
+      # Avoid unnecessary forward/reverse cusps on short goal approaches.
+      change_penalty: 5.0
       non_straight_penalty: 1.2
       cost_penalty: 2.0
       retrospective_penalty: 0.015
       lookup_table_size: 20.0
       cache_obstacle_heuristic: true
+      # Smooth lattice jaggies before MPPI tracks the path; the planner radius
+      # includes margin above the measured Ackermann minimum.
       smooth_path: true
       smoother:
-        max_iterations: 1000
+        max_iterations: 100
         w_smooth: 0.3
         w_data: 0.2
         tolerance: 1.0e-10
@@ -303,7 +290,6 @@ planner_server:
 
 smoother_server:
   ros__parameters:
-    use_sim_time: True
     smoother_plugins: ["simple_smoother"]
     simple_smoother:
       plugin: "nav2_smoother::SimpleSmoother"
@@ -324,7 +310,6 @@ behavior_server:
     global_frame: odom
     robot_base_frame: base_footprint
     transform_tolerance: 0.1
-    use_sim_time: true
     simulate_ahead_time: 2.0
     max_rotational_vel: 1.0
     min_rotational_vel: 0.4
@@ -332,11 +317,8 @@ behavior_server:
 
 robot_state_publisher:
   ros__parameters:
-    use_sim_time: True
-
 waypoint_follower:
   ros__parameters:
-    use_sim_time: True
     loop_rate: 20
     stop_on_failure: false
     waypoint_task_executor_plugin: "wait_at_waypoint"
@@ -347,12 +329,11 @@ waypoint_follower:
 
 velocity_smoother:
   ros__parameters:
-    use_sim_time: True
     smoothing_frequency: 20.0
     scale_velocities: False
     feedback: "OPEN_LOOP"
-    max_velocity: [0.26, 0.0, 1.0]
-    min_velocity: [-0.26, 0.0, -1.0]
+    max_velocity: [0.26, 0.0, 0.19]
+    min_velocity: [-0.26, 0.0, -0.19]
     max_accel: [2.5, 0.0, 0.8]
     max_decel: [-2.5, 0.0, -0.8]
     odom_topic: "odom"

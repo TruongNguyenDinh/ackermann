@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ackermann_mcu_bridge</name>
+  <version>0.0.0</version>
+  <description>Placeholder C++ package for the physical robot MCU bridge.</description>
+  <maintainer email="truongnd1124@gmail.com">rosdev</maintainer>
+  <license>TODO: License declaration</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

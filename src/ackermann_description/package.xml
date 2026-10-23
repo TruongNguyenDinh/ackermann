@@ -3,12 +3,18 @@
 <package format="3">
   <name>ackermann_description</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>Ackermann robot description and standalone visualization launch.</description>
   <maintainer email="truongnd1124@gmail.com">rosdev</maintainer>
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
   <exec_depend>xacro</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz2</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

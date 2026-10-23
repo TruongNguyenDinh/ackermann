@@ -12,7 +12,7 @@
   <exec_depend>launch_ros</exec_depend>
   <exec_depend>ackermann_description</exec_depend>
   <exec_depend>ackermann_odometry</exec_depend>
-  <exec_depend>ackermann_kinematics_py</exec_depend>
+  <exec_depend>ackermann_kinematics</exec_depend>
   <exec_depend>aws_robomaker_small_warehouse_world</exec_depend>
   <exec_depend>controller_manager</exec_depend>
   <exec_depend>gazebo_ros</exec_depend>

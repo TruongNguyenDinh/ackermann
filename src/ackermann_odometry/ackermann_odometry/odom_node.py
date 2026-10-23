@@ -19,9 +19,8 @@ class AckermannOdometry(Node):
         # ==========================
         # Robot geometry
         # ==========================
-        # Current defaults match the Xacro estimate; tune from physical
-        # measurements when rear track and wheel radius are confirmed.
-        self.declare_parameter('wheel_radius', 0.05)
+        # Wheel radius and rear track match the specified physical geometry.
+        self.declare_parameter('wheel_radius', 0.063)
         self.declare_parameter('rear_track', 0.3118)
         self.wheel_radius = self.get_parameter('wheel_radius').value
         self.track_width = self.get_parameter('rear_track').value

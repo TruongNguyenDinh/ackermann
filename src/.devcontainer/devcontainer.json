@@ -19,14 +19,16 @@
     "runArgs": [
         "--network=host",
         "--ipc=host",
-        "--privileged"
+        "--privileged",
+        "--gpus=all"
     ],
 
     "containerEnv": {
         "ROS_DOMAIN_ID": "0",
         "RMW_IMPLEMENTATION": "rmw_fastrtps_cpp",
         "DISPLAY": ":1",
-        "QT_X11_NO_MITSHM": "1"
+        "QT_X11_NO_MITSHM": "1",
+        "NVIDIA_DRIVER_CAPABILITIES": "compute,utility,graphics,display"
     },
 
     "mounts": [

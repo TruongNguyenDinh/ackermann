@@ -3,8 +3,7 @@
   <BehaviorTree ID="MainTree">
     <RecoveryNode number_of_retries="6" name="NavigateRecovery">
       <PipelineSequence name="NavigateWithReplanning">
-        <!-- Let the controller follow a path for 5 seconds before replacing
-             it; frequent replans can flip a Reeds-Shepp segment's direction. -->
+        <!-- Refresh every 5 seconds to limit path churn while moving. -->
         <RateController hz="0.2">
           <RecoveryNode number_of_retries="1" name="ComputePathToPose">
             <ComputePathToPose goal="{goal}" path="{path}" planner_id="GridBased"/>

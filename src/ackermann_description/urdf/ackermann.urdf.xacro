@@ -3,30 +3,32 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"
        name="agv_simulation">
 
-  <!-- Overall envelope dimensions come from the supplied drawing.
-       Wheelbase/track are retained estimates from the existing model;
-       body profile values are adjustable estimates, not measured vertices.
-       vehicle_width is the total envelope reference, not the chassis width. -->
-  <xacro:arg name="vehicle_length" default="0.4447"/>
+
+  <xacro:arg name="vehicle_length" default="0.3865"/>
   <xacro:arg name="vehicle_width" default="0.362"/>
   <xacro:arg name="wheelbase" default="0.3187"/>
   <xacro:arg name="front_track" default="0.3118"/>
   <xacro:arg name="rear_track" default="0.3118"/>
-  <xacro:arg name="wheel_radius" default="0.05"/>
+  <xacro:arg name="wheel_radius" default="0.063"/>
   <xacro:arg name="wheel_width" default="0.0408"/>
+
+  <xacro:arg name="wheel_outer_overhang" default="0.0047"/>
   <xacro:arg name="steering_axis_offset" default="0.0369"/>
   <xacro:arg name="front_body_width" default="0.238"/>
   <xacro:arg name="middle_body_width" default="0.180"/>
   <xacro:arg name="rear_body_width" default="0.238"/>
   <xacro:arg name="front_body_length" default="0.100"/>
-  <xacro:arg name="middle_body_length" default="0.1447"/>
+  <xacro:arg name="middle_body_length" default="0.0865"/>
   <xacro:arg name="rear_body_length" default="0.100"/>
   <xacro:arg name="chamfer_length" default="0.050"/>
-  <xacro:arg name="body_height" default="0.0184"/>
 
+  <xacro:arg name="body_height" default="0.0444"/>
+  <xacro:arg name="lidar_x_rear_axle" default="0.240"/>
+  <xacro:arg name="lidar_height" default="0.146"/>
+
+  <xacro:include filename="materials.xacro"/>
   <xacro:include filename="core_macro.xacro"/>
   <xacro:include filename="laser.xacro"/>
-  <xacro:include filename="gazebo_control.xacro"/>
 
   <xacro:core
     vehicle_length="$(arg vehicle_length)"
@@ -36,6 +38,7 @@
     rear_track="$(arg rear_track)"
     wheel_radius="$(arg wheel_radius)"
     wheel_width="$(arg wheel_width)"
+    wheel_outer_overhang="$(arg wheel_outer_overhang)"
     steering_axis_offset="$(arg steering_axis_offset)"
     front_body_width="$(arg front_body_width)"
     middle_body_width="$(arg middle_body_width)"
@@ -44,8 +47,10 @@
     middle_body_length="$(arg middle_body_length)"
     rear_body_length="$(arg rear_body_length)"
     chamfer_length="$(arg chamfer_length)"
-    body_height="$(arg body_height)"/>
-  <xacro:laser/>
-  <xacro:gazebo_control/>
+    body_height="$(arg body_height)"
+    lidar_x_rear_axle="$(arg lidar_x_rear_axle)"/>
+  <xacro:laser
+    lidar_height="$(arg lidar_height)"
+    wheel_radius="$(arg wheel_radius)"/>
 
 </robot>

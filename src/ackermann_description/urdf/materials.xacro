@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <material name="body_material">
+    <color rgba="0.62 0.82 0.66 1.0"/>
+  </material>
+  <material name="front_wheel_material">
+    <color rgba="0.88 0.16 0.16 1.0"/>
+  </material>
+  <material name="rear_wheel_material">
+    <color rgba="0.42 0.66 0.88 1.0"/>
+  </material>
+  <material name="lidar_material">
+    <color rgba="0.96 0.66 0.18 1.0"/>
+  </material>
+  <material name="sensor_mount_material">
+    <color rgba="0.78 0.78 0.78 1.0"/>
+  </material>
+  <material name="steering_material">
+    <color rgba="0.32 0.34 0.36 1.0"/>
+  </material>
+
+</robot>

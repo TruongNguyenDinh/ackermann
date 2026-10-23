@@ -9,7 +9,6 @@ from launch_ros.actions import Node
 def generate_launch_description():
 
     map_yaml_path = LaunchConfiguration('map')
-    use_sim_time = LaunchConfiguration('use_sim_time')
 
     default_map_path = os.path.join(
         os.path.expanduser('~'),
@@ -26,7 +25,6 @@ def generate_launch_description():
         parameters=[
             {
                 'yaml_filename': map_yaml_path,
-                'use_sim_time': use_sim_time,
             }
         ]
     )
@@ -38,7 +36,6 @@ def generate_launch_description():
         output='screen',
         parameters=[
             {
-                'use_sim_time': use_sim_time,
                 'autostart': True,
                 'node_names': ['map_server'],
             }
@@ -52,11 +49,6 @@ def generate_launch_description():
             description='Path to map yaml'
         ),
 
-        DeclareLaunchArgument(
-            'use_sim_time',
-            default_value='false',
-            description='Use simulation time'
-        ),
 
         map_server_node,
 
