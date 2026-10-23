@@ -1,0 +1,19 @@
+# Topic names are configurable; rosbag2 discovers publishers after startup.
+# Add MCU raw ticks, a confirmed goal topic, and a control-source topic once
+# those interfaces exist. Their names are intentionally not invented here.
+topics:
+  - /scan
+  - /imu/data
+  - /joint_states
+  - /odom
+  - /tf
+  - /tf_static
+  - /map
+  - /plan
+  - /goal_pose
+  - /cmd_vel_nav
+  - /cmd_vel
+  - /steering_controller/commands
+  - /wheel_velocity_controller/commands
+  - /navigate_to_pose/_action/feedback
+  - /navigate_to_pose/_action/status
